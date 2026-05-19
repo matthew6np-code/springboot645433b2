@@ -9,11 +9,11 @@
 			label-width="150px"
 		>
 			<template >
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="果蔬类型" prop="guoshuleixing">
-					<el-input v-model="ruleForm.guoshuleixing" placeholder="果蔬类型" clearable  :readonly="ro.guoshuleixing"></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="生猪批次" prop="guoshuleixing">
+					<el-input v-model="ruleForm.guoshuleixing" placeholder="生猪批次" clearable  :readonly="ro.guoshuleixing"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="果蔬类型" prop="guoshuleixing">
-					<el-input v-model="ruleForm.guoshuleixing" placeholder="果蔬类型" readonly></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="生猪批次" prop="guoshuleixing">
+					<el-input v-model="ruleForm.guoshuleixing" placeholder="生猪批次" readonly></el-input>
 				</el-form-item>
 			</template>
 			<el-form-item :style='{"padding":"0","margin":"30px 0","alignItems":"center","textAlign":"center","display":"flex","width":"100%","perspective":"320px","-webkitPerspective":"320px","fontSize":"48px","justifyContent":"flex-start"}' class="btn">

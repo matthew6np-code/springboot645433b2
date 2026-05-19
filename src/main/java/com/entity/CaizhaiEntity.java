@@ -22,7 +22,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 
 
 /**
- * 采摘
+ * 屠宰加工管理
  * 数据库通用操作实体类（普通增删改查）
  * @author 
  * @email 
@@ -52,25 +52,25 @@ public class CaizhaiEntity<T> implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long id;
 	/**
-	 * 果蔬名称
+	 * 生猪名称
 	 */
 					
 	private String guoshumingcheng;
 	
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 					
 	private String guoshutupian;
 	
 	/**
-	 * 采摘数量
+	 * 屠宰加工管理数量
 	 */
 					
 	private Integer zhongzhishuliang;
 	
 	/**
-	 * 采摘时间
+	 * 屠宰加工管理时间
 	 */
 				
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -97,49 +97,49 @@ public class CaizhaiEntity<T> implements Serializable {
 		this.id = id;
 	}
 	/**
-	 * 设置：果蔬名称
+	 * 设置：生猪名称
 	 */
 	public void setGuoshumingcheng(String guoshumingcheng) {
 		this.guoshumingcheng = guoshumingcheng;
 	}
 	/**
-	 * 获取：果蔬名称
+	 * 获取：生猪名称
 	 */
 	public String getGuoshumingcheng() {
 		return guoshumingcheng;
 	}
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	public void setGuoshutupian(String guoshutupian) {
 		this.guoshutupian = guoshutupian;
 	}
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
 	}
 	/**
-	 * 设置：采摘数量
+	 * 设置：屠宰加工管理数量
 	 */
 	public void setZhongzhishuliang(Integer zhongzhishuliang) {
 		this.zhongzhishuliang = zhongzhishuliang;
 	}
 	/**
-	 * 获取：采摘数量
+	 * 获取：屠宰加工管理数量
 	 */
 	public Integer getZhongzhishuliang() {
 		return zhongzhishuliang;
 	}
 	/**
-	 * 设置：采摘时间
+	 * 设置：屠宰加工管理时间
 	 */
 	public void setCaizhaishijian(Date caizhaishijian) {
 		this.caizhaishijian = caizhaishijian;
 	}
 	/**
-	 * 获取：采摘时间
+	 * 获取：屠宰加工管理时间
 	 */
 	public Date getCaizhaishijian() {
 		return caizhaishijian;

@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 果蔬信息评论表
+ * 生猪信息评论表
  * @author 
  * @email 
  * @date 2024-04-18 14:01:19

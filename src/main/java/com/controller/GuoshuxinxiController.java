@@ -40,7 +40,7 @@ import com.utils.CommonUtil;
 import java.io.IOException;
 
 /**
- * 果蔬信息
+ * 生猪信息
  * 后端接口
  * @author 
  * @email 
@@ -105,7 +105,7 @@ public class GuoshuxinxiController {
         EntityWrapper< GuoshuxinxiEntity> ew = new EntityWrapper< GuoshuxinxiEntity>();
  		ew.allEq(MPUtil.allEQMapPre( guoshuxinxi, "guoshuxinxi")); 
 		GuoshuxinxiView guoshuxinxiView =  guoshuxinxiService.selectView(ew);
-		return R.ok("查询果蔬信息成功").put("data", guoshuxinxiView);
+		return R.ok("查询生猪信息成功").put("data", guoshuxinxiView);
     }
 	
     /**

@@ -22,7 +22,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 
 
 /**
- * 施肥
+ * 饲料投喂记录
  * 数据库通用操作实体类（普通增删改查）
  * @author 
  * @email 
@@ -52,25 +52,25 @@ public class ShifeiEntity<T> implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long id;
 	/**
-	 * 果蔬名称
+	 * 生猪名称
 	 */
 					
 	private String guoshumingcheng;
 	
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 					
 	private String guoshutupian;
 	
 	/**
-	 * 施肥
+	 * 饲料投喂记录
 	 */
 					
 	private Integer shifei;
 	
 	/**
-	 * 施肥时间
+	 * 饲料投喂记录时间
 	 */
 				
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -97,49 +97,49 @@ public class ShifeiEntity<T> implements Serializable {
 		this.id = id;
 	}
 	/**
-	 * 设置：果蔬名称
+	 * 设置：生猪名称
 	 */
 	public void setGuoshumingcheng(String guoshumingcheng) {
 		this.guoshumingcheng = guoshumingcheng;
 	}
 	/**
-	 * 获取：果蔬名称
+	 * 获取：生猪名称
 	 */
 	public String getGuoshumingcheng() {
 		return guoshumingcheng;
 	}
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	public void setGuoshutupian(String guoshutupian) {
 		this.guoshutupian = guoshutupian;
 	}
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
 	}
 	/**
-	 * 设置：施肥
+	 * 设置：饲料投喂记录
 	 */
 	public void setShifei(Integer shifei) {
 		this.shifei = shifei;
 	}
 	/**
-	 * 获取：施肥
+	 * 获取：饲料投喂记录
 	 */
 	public Integer getShifei() {
 		return shifei;
 	}
 	/**
-	 * 设置：施肥时间
+	 * 设置：饲料投喂记录时间
 	 */
 	public void setShifeishijian(Date shifeishijian) {
 		this.shifeishijian = shifeishijian;
 	}
 	/**
-	 * 获取：施肥时间
+	 * 获取：饲料投喂记录时间
 	 */
 	public Date getShifeishijian() {
 		return shifeishijian;

@@ -20,7 +20,7 @@
                     </div>
 				</div>
 				<div class="item" :style='{"padding":"0 10px","margin":"0 0 4px 0","borderColor":"#f3f3f3","background":"#fff","borderWidth":"0 0 1px","display":"flex","borderStyle":"solid","justifyContent":"spaceBetween"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#999","textAlign":"right","width":"auto","fontSize":"14px","lineHeight":"36px","height":"36px"}'>灌溉浇水</div>
+					<div class="lable" :style='{"padding":"0 10px","color":"#999","textAlign":"right","width":"auto","fontSize":"14px","lineHeight":"36px","height":"36px"}'>养殖环境</div>
 					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#666","flex":"1","height":"auto"}'>{{detail.guangaijiaoshui}}</div>
 				</div>
 				<div class="item" :style='{"padding":"0 10px","margin":"0 0 4px 0","borderColor":"#f3f3f3","background":"#fff","borderWidth":"0 0 1px","display":"flex","borderStyle":"solid","justifyContent":"spaceBetween"}'>
@@ -74,7 +74,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '浇水'
+            name: '饲养环境'
           }
         ],
         title: '',
@@ -225,7 +225,7 @@
 		},
 		// 删除
 		async delClick(){
-			await this.$confirm('是否删除此浇水？')
+			await this.$confirm('是否删除此饲养环境？')
 			  .then(_ => {
 			    this.$http.post('jiaoshui/delete', [this.detail.id]).then(async res => {
 					if (res.data.code == 0) {

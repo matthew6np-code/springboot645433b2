@@ -3,7 +3,7 @@
 	<el-button :style='{"border":"0","cursor":"pointer","padding":"0 10px","margin":"0 5px 0 0","outline":"none","color":"#333","borderRadius":"2px","background":"#b4ebcc","width":"auto","lineHeight":"36px","fontSize":"14px","height":"36px"}' type="warning" size="mini" @click="backClick" class="el-icon-back">返回</el-button>
 	<div :style='{"width":"100%","overflow":"hidden","flexWrap":"wrap","background":"#fff","justifyContent":"space-between","display":"flex"}'>
 		<div :style='{"margin":"10px 0 0","textAlign":"center","background":"url(http://codegen.caihongy.cn/20230921/eb4b56c7d55142c4b9339e032022bfb5.png) repeat-x center bottom","display":"none","width":"calc(100% - 0px)","lineHeight":"56px","height":"66px"}'>
-			<div :style='{"margin":"0 auto","color":"#333","textAlign":"center","background":"none","display":"inline-block","width":"auto","fontSize":"20px","fontWeight":"500"}'>果蔬生产资讯</div>
+			<div :style='{"margin":"0 auto","color":"#333","textAlign":"center","background":"none","display":"inline-block","width":"auto","fontSize":"20px","fontWeight":"500"}'>生猪市场资讯</div>
 		</div>
 		<div :style='{"minHeight":"360px","padding":"20px","alignItems":"flex-start","flexWrap":"wrap","background":"none","flex":"1","display":"flex","width":"calc(100% - 320px)","position":"relative","order":"2"}'>
 			<div  :style='{"margin":"0 0 10px","color":"#333","textAlign":"center","width":"100%","lineHeight":"40px","fontSize":"22px","fontWeight":"600"}'>{{detail.title}}</div>

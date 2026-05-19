@@ -8,12 +8,12 @@
       :rules="rules"
       label-width="120px"
     >
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬名称" prop="guoshumingcheng">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪名称" prop="guoshumingcheng">
             <el-input v-model="ruleForm.guoshumingcheng" 
-                placeholder="果蔬名称" clearable :disabled=" false  ||ro.guoshumingcheng"></el-input>
+                placeholder="生猪名称" clearable :disabled=" false  ||ro.guoshumingcheng"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}'  label="果蔬类型" prop="guoshuleixing">
-            <el-select v-model="ruleForm.guoshuleixing" placeholder="请选择果蔬类型" :disabled=" false  ||ro.guoshuleixing" >
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}'  label="生猪批次" prop="guoshuleixing">
+            <el-select v-model="ruleForm.guoshuleixing" placeholder="请选择生猪批次" :disabled=" false  ||ro.guoshuleixing" >
               <el-option
                   v-for="(item,index) in guoshuleixingOptions"
                   :key="index"
@@ -22,9 +22,9 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬图片" v-if="type!='cross' || (type=='cross' && !ro.guoshutupian)" prop="guoshutupian">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪图片" v-if="type!='cross' || (type=='cross' && !ro.guoshutupian)" prop="guoshutupian">
             <file-upload
-            tip="点击上传果蔬图片"
+            tip="点击上传生猪图片"
             action="file/upload"
             :limit="3"
             :multiple="true"
@@ -32,7 +32,7 @@
             @change="guoshutupianUploadChange"
             ></file-upload>
           </el-form-item>
-            <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' class="upload" v-else label="果蔬图片" prop="guoshutupian">
+            <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' class="upload" v-else label="生猪图片" prop="guoshutupian">
                 <img v-if="ruleForm.guoshutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.guoshutupian.split(',')[0]" width="100" height="100">
                 <img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.guoshutupian.split(',')" :src="baseUrl+item" width="100" height="100">
             </el-form-item>
@@ -46,34 +46,34 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="种植数量" prop="zhongzhishuliang">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="养殖数量" prop="zhongzhishuliang">
             <el-input v-model.number="ruleForm.zhongzhishuliang" 
-                placeholder="种植数量" clearable :disabled=" false  ||ro.zhongzhishuliang"></el-input>
+                placeholder="养殖数量" clearable :disabled=" false  ||ro.zhongzhishuliang"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="病虫害防治" prop="bingchonghaifangzhi">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="病害防治" prop="bingchonghaifangzhi">
             <el-input v-model="ruleForm.bingchonghaifangzhi" 
-                placeholder="病虫害防治" clearable :disabled=" false  ||ro.bingchonghaifangzhi"></el-input>
+                placeholder="病害防治" clearable :disabled=" false  ||ro.bingchonghaifangzhi"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="施肥" prop="shifei">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="饲料投喂记录" prop="shifei">
             <el-input v-model.number="ruleForm.shifei" 
-                placeholder="施肥" clearable :disabled=" false  ||ro.shifei"></el-input>
+                placeholder="饲料投喂记录" clearable :disabled=" false  ||ro.shifei"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="灌溉浇水" prop="guangaijiaoshui">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="养殖环境" prop="guangaijiaoshui">
             <el-input v-model.number="ruleForm.guangaijiaoshui" 
-                placeholder="灌溉浇水" clearable :disabled=" false  ||ro.guangaijiaoshui"></el-input>
+                placeholder="养殖环境" clearable :disabled=" false  ||ro.guangaijiaoshui"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="播种时间" prop="bozhongshijian">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="入栏时间" prop="bozhongshijian">
               <el-date-picker
 				  :disabled=" false  ||ro.bozhongshijian"
                   value-format="yyyy-MM-dd HH:mm:ss"
                   v-model="ruleForm.bozhongshijian" 
                   type="datetime"
-                  placeholder="播种时间">
+                  placeholder="入栏时间">
               </el-date-picker>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬场地" prop="guoshuchangdi">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪场地" prop="guoshuchangdi">
             <el-input v-model="ruleForm.guoshuchangdi" 
-                placeholder="果蔬场地" clearable :disabled=" false  ||ro.guoshuchangdi"></el-input>
+                placeholder="生猪场地" clearable :disabled=" false  ||ro.guoshuchangdi"></el-input>
           </el-form-item>
           <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="运输方式" prop="yunshufangshi">
             <el-input v-model="ruleForm.yunshufangshi" 

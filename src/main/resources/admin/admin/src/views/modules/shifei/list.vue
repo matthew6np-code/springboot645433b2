@@ -33,12 +33,12 @@
 					<el-table-column :resizable='true' :sortable='true' label="序号" type="index" width="50" />
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guoshumingcheng"
-						label="果蔬名称">
+						label="生猪名称">
 						<template slot-scope="scope">
 							{{scope.row.guoshumingcheng}}
 						</template>
 					</el-table-column>
-					<el-table-column :resizable='true' :sortable='true' prop="guoshutupian" width="200" label="果蔬图片">
+					<el-table-column :resizable='true' :sortable='true' prop="guoshutupian" width="200" label="生猪图片">
 						<template slot-scope="scope">
 							<div v-if="scope.row.guoshutupian">
 								<img v-if="scope.row.guoshutupian.substring(0,4)=='http'" :src="scope.row.guoshutupian.split(',')[0]" width="100" height="100" style="object-fit: cover" @click="imgPreView(scope.row.guoshutupian.split(',')[0])">
@@ -49,14 +49,14 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="shifei"
-						label="施肥">
+						label="饲料投喂记录">
 						<template slot-scope="scope">
 							{{scope.row.shifei}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="shifeishijian"
-						label="施肥时间">
+						label="饲料投喂记录时间">
 						<template slot-scope="scope">
 							{{scope.row.shifeishijian}}
 						</template>

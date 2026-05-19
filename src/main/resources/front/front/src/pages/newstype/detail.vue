@@ -67,7 +67,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '果蔬生产资讯分类'
+            name: '生猪市场资讯分类'
           }
         ],
         title: '',
@@ -215,7 +215,7 @@
 		},
 		// 删除
 		async delClick(){
-			await this.$confirm('是否删除此果蔬生产资讯分类？')
+			await this.$confirm('是否删除此生猪市场资讯分类？')
 			  .then(_ => {
 			    this.$http.post('newstype/delete', [this.detail.id]).then(async res => {
 					if (res.data.code == 0) {

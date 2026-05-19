@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 采摘
+ * 屠宰加工管理
  * @author 
  * @email 
  * @date 2024-04-18 14:01:18
@@ -21,19 +21,19 @@ public class CaizhaiVO  implements Serializable {
 
 	 			
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 	
 	private String guoshutupian;
 		
 	/**
-	 * 采摘数量
+	 * 屠宰加工管理数量
 	 */
 	
 	private Integer zhongzhishuliang;
 		
 	/**
-	 * 采摘时间
+	 * 屠宰加工管理时间
 	 */
 		
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -42,7 +42,7 @@ public class CaizhaiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	 
 	public void setGuoshutupian(String guoshutupian) {
@@ -50,7 +50,7 @@ public class CaizhaiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
@@ -58,7 +58,7 @@ public class CaizhaiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：采摘数量
+	 * 设置：屠宰加工管理数量
 	 */
 	 
 	public void setZhongzhishuliang(Integer zhongzhishuliang) {
@@ -66,7 +66,7 @@ public class CaizhaiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：采摘数量
+	 * 获取：屠宰加工管理数量
 	 */
 	public Integer getZhongzhishuliang() {
 		return zhongzhishuliang;
@@ -74,7 +74,7 @@ public class CaizhaiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：采摘时间
+	 * 设置：屠宰加工管理时间
 	 */
 	 
 	public void setCaizhaishijian(Date caizhaishijian) {
@@ -82,7 +82,7 @@ public class CaizhaiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：采摘时间
+	 * 获取：屠宰加工管理时间
 	 */
 	public Date getCaizhaishijian() {
 		return caizhaishijian;

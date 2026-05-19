@@ -35,7 +35,7 @@
 		    <div :style='{"width":"100%","padding":"0 0px","overflow":"hidden","alignItems":"center","display":"flex","height":"auto"}' class="item-info">
 		      <div :style='{"width":"100%","padding":"0 0px 0 0","flex":"1"}'>
 				<div class="title">{{item.guoshumingcheng}}</div>
-				<div class="title">施肥时间:{{item.shifeishijian}}</div>
+				<div class="title">饲料投喂记录时间:{{item.shifeishijian}}</div>
 				<div v-if="item.price" class="price"><span :style='{"fontSize":"12px"}'>￥</span>{{item.price}}</div>
 		        <div :style='{"padding":"2px 0px","borderColor":"#f0f0f0","borderStyle":"dashed","float":"right","borderWidth":"0 0 0px 0","display":"inline-block"}' class="time">
 		          <span class="icon iconfont icon-shijian21"></span>
@@ -85,7 +85,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '施肥'
+            name: '饲料投喂记录'
           }
         ],
         formSearch: {

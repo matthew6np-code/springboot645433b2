@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 果蔬类型
+ * 生猪批次
  * @author 
  * @email 
  * @date 2024-04-18 14:01:18

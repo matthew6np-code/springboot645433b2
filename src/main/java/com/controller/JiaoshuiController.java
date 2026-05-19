@@ -40,7 +40,7 @@ import com.utils.CommonUtil;
 import java.io.IOException;
 
 /**
- * 浇水
+ * 饲养环境
  * 后端接口
  * @author 
  * @email 
@@ -105,7 +105,7 @@ public class JiaoshuiController {
         EntityWrapper< JiaoshuiEntity> ew = new EntityWrapper< JiaoshuiEntity>();
  		ew.allEq(MPUtil.allEQMapPre( jiaoshui, "jiaoshui")); 
 		JiaoshuiView jiaoshuiView =  jiaoshuiService.selectView(ew);
-		return R.ok("查询浇水成功").put("data", jiaoshuiView);
+		return R.ok("查询饲养环境成功").put("data", jiaoshuiView);
     }
 	
     /**

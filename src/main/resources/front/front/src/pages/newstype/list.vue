@@ -93,7 +93,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '果蔬生产资讯分类'
+            name: '生猪市场资讯分类'
           }
         ],
         formSearch: {

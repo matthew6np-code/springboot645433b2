@@ -12,8 +12,8 @@
 	<div class="list-preview" :style='{"padding":"30px 10% 0","margin":"0px auto","alignItems":"flex-start","flexWrap":"wrap","background":"#fff","display":"flex","width":"100%","position":"relative","justifyContent":"flex-end"}'>
     <el-form :inline="true" :model="formSearch" class="list-form-pv" :style='{"padding":"0 0 0px","margin":"0px 0 0","borderColor":"#ddd","alignItems":"center","display":"flex","clear":"both","flexWrap":"wrap","background":"#fff","borderWidth":"0 0 0px","width":"100%","borderStyle":"solid","height":"auto","order":"1"}'>
       <el-form-item :style='{"margin":"0 10px 0 0"}'>
-	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 0 0 10px","lineHeight":"42px","textAlign":"right","display":"inline-block"}'>果蔬名称：</div>
-        <el-input v-model="formSearch.guoshumingcheng" placeholder="果蔬名称" @keydown.enter.native="getList(1, curFenlei)" clearable></el-input>
+	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 0 0 10px","lineHeight":"42px","textAlign":"right","display":"inline-block"}'>生猪名称：</div>
+        <el-input v-model="formSearch.guoshumingcheng" placeholder="生猪名称" @keydown.enter.native="getList(1, curFenlei)" clearable></el-input>
       </el-form-item>
 	  <el-button v-if=" true " :style='{"cursor":"pointer","border":"0","padding":"0px 15px","margin":"0px 10px 0 10px","color":"#fff","display":"inline-block","outline":"none","borderRadius":"0px","background":"#ff777f","width":"100px","fontSize":"14px","lineHeight":"36px","height":"36px"}' type="primary" @click="getList(1, curFenlei)"><i v-if="true" :style='{"color":"#fff","margin":"0 10px 0 0","fontSize":"14px"}' class="el-icon-search"></i>查询</el-button>
 	  <el-button v-if="btnAuth('caizhai','新增')" :style='{"cursor":"pointer","border":"0px solid #ddd","padding":"0px 15px","margin":"0px 10px 0 0","color":"#fff","display":"inline-block","outline":"none","borderRadius":"0px","background":"#c5c5c5","width":"80px","fontSize":"14px","lineHeight":"36px","height":"36px"}' type="primary" @click="add('/index/caizhaiAdd')"><i v-if="false" :style='{"color":"#fff","margin":"0 10px 0 0","fontSize":"14px"}' class="el-icon-circle-plus-outline"></i>添加</el-button>
@@ -39,7 +39,7 @@
 		    <div :style='{"width":"100%","padding":"0 0px","overflow":"hidden","alignItems":"center","display":"flex","height":"auto"}' class="item-info">
 		      <div :style='{"width":"100%","padding":"0 0px 0 0","flex":"1"}'>
 				<div class="title">{{item.guoshumingcheng}}</div>
-				<div class="title">采摘时间:{{item.caizhaishijian}}</div>
+				<div class="title">屠宰加工管理时间:{{item.caizhaishijian}}</div>
 				<div v-if="item.price" class="price"><span :style='{"fontSize":"12px"}'>￥</span>{{item.price}}</div>
 		        <div :style='{"padding":"2px 0px","borderColor":"#f0f0f0","borderStyle":"dashed","float":"right","borderWidth":"0 0 0px 0","display":"inline-block"}' class="time">
 		          <span class="icon iconfont icon-shijian21"></span>
@@ -89,7 +89,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '采摘'
+            name: '屠宰加工管理'
           }
         ],
         formSearch: {

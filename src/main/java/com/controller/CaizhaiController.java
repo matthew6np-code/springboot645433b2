@@ -40,7 +40,7 @@ import com.utils.CommonUtil;
 import java.io.IOException;
 
 /**
- * 采摘
+ * 屠宰加工管理
  * 后端接口
  * @author 
  * @email 
@@ -105,7 +105,7 @@ public class CaizhaiController {
         EntityWrapper< CaizhaiEntity> ew = new EntityWrapper< CaizhaiEntity>();
  		ew.allEq(MPUtil.allEQMapPre( caizhai, "caizhai")); 
 		CaizhaiView caizhaiView =  caizhaiService.selectView(ew);
-		return R.ok("查询采摘成功").put("data", caizhaiView);
+		return R.ok("查询屠宰加工管理成功").put("data", caizhaiView);
     }
 	
     /**

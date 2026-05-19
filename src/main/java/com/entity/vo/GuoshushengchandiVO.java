@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 果蔬生产地
+ * 养殖场
  * @author 
  * @email 
  * @date 2024-04-18 14:01:18
@@ -21,7 +21,7 @@ public class GuoshushengchandiVO  implements Serializable {
 
 	 			
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 	
 	private String guoshutupian;
@@ -58,7 +58,7 @@ public class GuoshushengchandiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	 
 	public void setGuoshutupian(String guoshutupian) {
@@ -66,7 +66,7 @@ public class GuoshushengchandiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;

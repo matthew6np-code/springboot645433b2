@@ -56,7 +56,7 @@ export const routes = [{
     }
       ,{
 	path: '/news',
-        name: '果蔬生产资讯',
+        name: '生猪市场资讯',
         component: news
       }
       ,{
@@ -66,12 +66,12 @@ export const routes = [{
       }
       ,{
 	path: '/guoshuxinxi',
-        name: '果蔬信息',
+        name: '生猪信息',
         component: guoshuxinxi
       }
       ,{
 	path: '/caizhai',
-        name: '采摘',
+        name: '屠宰加工管理',
         component: caizhai
       }
       ,{
@@ -81,7 +81,7 @@ export const routes = [{
       }
       ,{
 	path: '/jiaoshui',
-        name: '浇水',
+        name: '饲养环境',
         component: jiaoshui
       }
       ,{
@@ -91,12 +91,12 @@ export const routes = [{
       }
       ,{
 	path: '/guoshuleixing',
-        name: '果蔬类型',
+        name: '生猪批次',
         component: guoshuleixing
       }
       ,{
 	path: '/discussguoshuxinxi',
-        name: '果蔬信息评论',
+        name: '生猪信息评论',
         component: discussguoshuxinxi
       }
       ,{
@@ -111,17 +111,17 @@ export const routes = [{
       }
       ,{
 	path: '/shifei',
-        name: '施肥',
+        name: '饲料投喂记录',
         component: shifei
       }
       ,{
 	path: '/guoshushengchandi',
-        name: '果蔬生产地',
+        name: '养殖场',
         component: guoshushengchandi
       }
       ,{
 	path: '/newstype',
-        name: '果蔬生产资讯分类',
+        name: '生猪市场资讯分类',
         component: newstype
       }
     ]

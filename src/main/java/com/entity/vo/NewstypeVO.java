@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 果蔬生产资讯分类
+ * 生猪市场资讯分类
  * @author 
  * @email 
  * @date 2024-04-18 14:01:18

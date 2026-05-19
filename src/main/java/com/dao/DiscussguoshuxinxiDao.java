@@ -13,7 +13,7 @@ import com.entity.view.DiscussguoshuxinxiView;
 
 
 /**
- * 果蔬信息评论表
+ * 生猪信息评论表
  * 
  * @author 
  * @email 

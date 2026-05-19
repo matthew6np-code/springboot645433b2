@@ -8,13 +8,13 @@
       :rules="rules"
       label-width="120px"
     >
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬名称" prop="guoshumingcheng">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪名称" prop="guoshumingcheng">
             <el-input v-model="ruleForm.guoshumingcheng" 
-                placeholder="果蔬名称" clearable :disabled=" false  ||ro.guoshumingcheng"></el-input>
+                placeholder="生猪名称" clearable :disabled=" false  ||ro.guoshumingcheng"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬图片" v-if="type!='cross' || (type=='cross' && !ro.guoshutupian)" prop="guoshutupian">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪图片" v-if="type!='cross' || (type=='cross' && !ro.guoshutupian)" prop="guoshutupian">
             <file-upload
-            tip="点击上传果蔬图片"
+            tip="点击上传生猪图片"
             action="file/upload"
             :limit="3"
             :multiple="true"
@@ -22,12 +22,12 @@
             @change="guoshutupianUploadChange"
             ></file-upload>
           </el-form-item>
-            <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' class="upload" v-else label="果蔬图片" prop="guoshutupian">
+            <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' class="upload" v-else label="生猪图片" prop="guoshutupian">
                 <img v-if="ruleForm.guoshutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.guoshutupian.split(',')[0]" width="100" height="100">
                 <img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.guoshutupian.split(',')" :src="baseUrl+item" width="100" height="100">
             </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}'  label="施肥" prop="shifei">
-            <el-select v-model="ruleForm.shifei" placeholder="请选择施肥" :disabled=" false  ||ro.shifei" >
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}'  label="饲料投喂记录" prop="shifei">
+            <el-select v-model="ruleForm.shifei" placeholder="请选择饲料投喂记录" :disabled=" false  ||ro.shifei" >
               <el-option
                   v-for="(item,index) in shifeiOptions"
                   :key="index"
@@ -36,13 +36,13 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="施肥时间" prop="shifeishijian">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="饲料投喂记录时间" prop="shifeishijian">
               <el-date-picker
 				  :disabled=" false  ||ro.shifeishijian"
                   value-format="yyyy-MM-dd HH:mm:ss"
                   v-model="ruleForm.shifeishijian" 
                   type="datetime"
-                  placeholder="施肥时间">
+                  placeholder="饲料投喂记录时间">
               </el-date-picker>
           </el-form-item>
 
@@ -177,7 +177,7 @@
       // 提交
       onSubmit() {
 			if(!this.ruleForm.shifei){
-				this.$message.error("施肥不能为空");
+				this.$message.error("饲料投喂记录不能为空");
 				return
 			}
 			var obj = JSON.parse(localStorage.getItem('crossObj'));

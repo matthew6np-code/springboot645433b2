@@ -130,7 +130,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '果蔬信息评论表'
+            name: '生猪信息评论表'
           }
         ],
         title: '',
@@ -365,7 +365,7 @@
 		},
 		// 删除
 		async delClick(){
-			await this.$confirm('是否删除此果蔬信息评论表？')
+			await this.$confirm('是否删除此生猪信息评论表？')
 			  .then(_ => {
 			    this.$http.post('discussguoshuxinxi/delete', [this.detail.id]).then(async res => {
 					if (res.data.code == 0) {

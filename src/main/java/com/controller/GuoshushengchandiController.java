@@ -40,7 +40,7 @@ import com.utils.CommonUtil;
 import java.io.IOException;
 
 /**
- * 果蔬生产地
+ * 养殖场
  * 后端接口
  * @author 
  * @email 
@@ -105,7 +105,7 @@ public class GuoshushengchandiController {
         EntityWrapper< GuoshushengchandiEntity> ew = new EntityWrapper< GuoshushengchandiEntity>();
  		ew.allEq(MPUtil.allEQMapPre( guoshushengchandi, "guoshushengchandi")); 
 		GuoshushengchandiView guoshushengchandiView =  guoshushengchandiService.selectView(ew);
-		return R.ok("查询果蔬生产地成功").put("data", guoshushengchandiView);
+		return R.ok("查询养殖场成功").put("data", guoshushengchandiView);
     }
 	
     /**

@@ -22,7 +22,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 
 
 /**
- * 果蔬生产资讯
+ * 生猪市场资讯
  * 数据库通用操作实体类（普通增删改查）
  * @author 
  * @email 

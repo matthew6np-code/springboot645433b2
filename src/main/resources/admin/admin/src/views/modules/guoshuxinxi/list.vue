@@ -5,8 +5,8 @@
 			<el-form class="center-form-pv" :style='{"padding":"0px 0px 0","margin":"0px","overflow":"hidden","flexWrap":"wrap","background":"none","display":"flex","fontSize":"inherit"}' :inline="true" :model="searchForm">
 				<el-row :style='{"width":"100%","fontSize":"inherit","color":"#999","textAlign":"left","display":"block","order":"2"}' >
 					<div :style='{"margin":"0 0px 0 0","fontSize":"inherit","display":"inline-block"}'>
-						<label :style='{"margin":"0 10px 0 0","color":"inherit","display":"inline-block","lineHeight":"40px","fontSize":"inherit","fontWeight":"500","height":"40px"}' class="item-label">果蔬名称</label>
-						<el-input v-model="searchForm.guoshumingcheng" placeholder="果蔬名称" @keydown.enter.native="search()" clearable></el-input>
+						<label :style='{"margin":"0 10px 0 0","color":"inherit","display":"inline-block","lineHeight":"40px","fontSize":"inherit","fontWeight":"500","height":"40px"}' class="item-label">生猪名称</label>
+						<el-input v-model="searchForm.guoshumingcheng" placeholder="生猪名称" @keydown.enter.native="search()" clearable></el-input>
 					</div>
 					<div :style='{"margin":"0 0px 0 0","fontSize":"inherit","display":"inline-block"}' class="select" label="生长阶段" prop="shengzhangjieduan">
 						<label :style='{"margin":"0 10px 0 0","color":"inherit","display":"inline-block","lineHeight":"40px","fontSize":"inherit","fontWeight":"500","height":"40px"}' class="item-label">生长阶段</label>
@@ -47,19 +47,19 @@
 					<el-table-column :resizable='true' :sortable='true' label="序号" type="index" width="50" />
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guoshumingcheng"
-						label="果蔬名称">
+						label="生猪名称">
 						<template slot-scope="scope">
 							{{scope.row.guoshumingcheng}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guoshuleixing"
-						label="果蔬类型">
+						label="生猪批次">
 						<template slot-scope="scope">
 							{{scope.row.guoshuleixing}}
 						</template>
 					</el-table-column>
-					<el-table-column :resizable='true' :sortable='true' prop="guoshutupian" width="200" label="果蔬图片">
+					<el-table-column :resizable='true' :sortable='true' prop="guoshutupian" width="200" label="生猪图片">
 						<template slot-scope="scope">
 							<div v-if="scope.row.guoshutupian">
 								<img v-if="scope.row.guoshutupian.substring(0,4)=='http'" :src="scope.row.guoshutupian.split(',')[0]" width="100" height="100" style="object-fit: cover" @click="imgPreView(scope.row.guoshutupian.split(',')[0])">
@@ -77,42 +77,42 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="zhongzhishuliang"
-						label="种植数量">
+						label="养殖数量">
 						<template slot-scope="scope">
 							{{scope.row.zhongzhishuliang}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="bingchonghaifangzhi"
-						label="病虫害防治">
+						label="病害防治">
 						<template slot-scope="scope">
 							{{scope.row.bingchonghaifangzhi}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="shifei"
-						label="施肥">
+						label="饲料投喂记录">
 						<template slot-scope="scope">
 							{{scope.row.shifei}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guangaijiaoshui"
-						label="灌溉浇水">
+						label="养殖环境">
 						<template slot-scope="scope">
 							{{scope.row.guangaijiaoshui}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="bozhongshijian"
-						label="播种时间">
+						label="入栏时间">
 						<template slot-scope="scope">
 							{{scope.row.bozhongshijian}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guoshuchangdi"
-						label="果蔬场地">
+						label="生猪场地">
 						<template slot-scope="scope">
 							{{scope.row.guoshuchangdi}}
 						</template>
@@ -151,17 +151,17 @@
 								<span class="icon iconfont icon-chakan2" :style='{"margin":"0 2px","fontSize":"inherit","color":"inherit","height":"40px"}'></span>
 								详情
 							</el-button>
-							<el-button class="btn8" v-if="isAuth('guoshuxinxi','施肥')" @click="shifeiCrossAddOrUpdateHandler(scope.row,'cross','','','','')" type="success">
+							<el-button class="btn8" v-if="isAuth('guoshuxinxi','饲料投喂记录')" @click="shifeiCrossAddOrUpdateHandler(scope.row,'cross','','','','')" type="success">
 								<span class="icon iconfont icon-xihuan" :style='{"margin":"0 2px","fontSize":"inherit","color":"inherit","height":"40px"}'></span>
-								施肥
+								饲料投喂记录
 							</el-button>
-							<el-button class="btn8" v-if="isAuth('guoshuxinxi','浇水')" @click="jiaoshuiCrossAddOrUpdateHandler(scope.row,'cross','','','','')" type="success">
+							<el-button class="btn8" v-if="isAuth('guoshuxinxi','饲养环境')" @click="jiaoshuiCrossAddOrUpdateHandler(scope.row,'cross','','','','')" type="success">
 								<span class="icon iconfont icon-xihuan" :style='{"margin":"0 2px","fontSize":"inherit","color":"inherit","height":"40px"}'></span>
-								浇水
+								饲养环境
 							</el-button>
-							<el-button class="btn8" v-if="isAuth('guoshuxinxi','采摘')" @click="caizhaiCrossAddOrUpdateHandler(scope.row,'cross','','','','')" type="success">
+							<el-button class="btn8" v-if="isAuth('guoshuxinxi','屠宰加工管理')" @click="caizhaiCrossAddOrUpdateHandler(scope.row,'cross','','','','')" type="success">
 								<span class="icon iconfont icon-xihuan" :style='{"margin":"0 2px","fontSize":"inherit","color":"inherit","height":"40px"}'></span>
-								采摘
+								屠宰加工管理
 							</el-button>
 							<el-button class="edit" v-if=" isAuth('guoshuxinxi','修改') " type="success" @click="addOrUpdateHandler(scope.row.id)">
 								<span class="icon iconfont icon-xiugai10" :style='{"margin":"0 2px","fontSize":"inherit","color":"inherit","height":"40px"}'></span>

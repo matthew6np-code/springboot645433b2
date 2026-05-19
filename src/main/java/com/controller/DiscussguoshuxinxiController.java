@@ -40,7 +40,7 @@ import com.utils.CommonUtil;
 import java.io.IOException;
 
 /**
- * 果蔬信息评论表
+ * 生猪信息评论表
  * 后端接口
  * @author 
  * @email 
@@ -105,7 +105,7 @@ public class DiscussguoshuxinxiController {
         EntityWrapper< DiscussguoshuxinxiEntity> ew = new EntityWrapper< DiscussguoshuxinxiEntity>();
  		ew.allEq(MPUtil.allEQMapPre( discussguoshuxinxi, "discussguoshuxinxi")); 
 		DiscussguoshuxinxiView discussguoshuxinxiView =  discussguoshuxinxiService.selectView(ew);
-		return R.ok("查询果蔬信息评论表成功").put("data", discussguoshuxinxiView);
+		return R.ok("查询生猪信息评论表成功").put("data", discussguoshuxinxiView);
     }
 	
     /**

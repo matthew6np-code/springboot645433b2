@@ -12,7 +12,7 @@ import com.entity.view.GuoshushengchandiView;
 
 
 /**
- * 果蔬生产地
+ * 养殖场
  *
  * @author 
  * @email 

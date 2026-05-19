@@ -40,7 +40,7 @@ import com.utils.CommonUtil;
 import java.io.IOException;
 
 /**
- * 施肥
+ * 饲料投喂记录
  * 后端接口
  * @author 
  * @email 
@@ -105,7 +105,7 @@ public class ShifeiController {
         EntityWrapper< ShifeiEntity> ew = new EntityWrapper< ShifeiEntity>();
  		ew.allEq(MPUtil.allEQMapPre( shifei, "shifei")); 
 		ShifeiView shifeiView =  shifeiService.selectView(ew);
-		return R.ok("查询施肥成功").put("data", shifeiView);
+		return R.ok("查询饲料投喂记录成功").put("data", shifeiView);
     }
 	
     /**

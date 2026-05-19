@@ -40,7 +40,7 @@ import com.utils.CommonUtil;
 import java.io.IOException;
 
 /**
- * 果蔬生产资讯分类
+ * 生猪市场资讯分类
  * 后端接口
  * @author 
  * @email 
@@ -105,7 +105,7 @@ public class NewstypeController {
         EntityWrapper< NewstypeEntity> ew = new EntityWrapper< NewstypeEntity>();
  		ew.allEq(MPUtil.allEQMapPre( newstype, "newstype")); 
 		NewstypeView newstypeView =  newstypeService.selectView(ew);
-		return R.ok("查询果蔬生产资讯分类成功").put("data", newstypeView);
+		return R.ok("查询生猪市场资讯分类成功").put("data", newstypeView);
     }
 	
     /**

@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 果蔬信息
+ * 生猪信息
  * @author 
  * @email 
  * @date 2024-04-18 14:01:18
@@ -21,13 +21,13 @@ public class GuoshuxinxiVO  implements Serializable {
 
 	 			
 	/**
-	 * 果蔬类型
+	 * 生猪批次
 	 */
 	
 	private String guoshuleixing;
 		
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 	
 	private String guoshutupian;
@@ -39,31 +39,31 @@ public class GuoshuxinxiVO  implements Serializable {
 	private String shengzhangjieduan;
 		
 	/**
-	 * 种植数量
+	 * 养殖数量
 	 */
 	
 	private Integer zhongzhishuliang;
 		
 	/**
-	 * 病虫害防治
+	 * 病害防治
 	 */
 	
 	private String bingchonghaifangzhi;
 		
 	/**
-	 * 施肥
+	 * 饲料投喂记录
 	 */
 	
 	private Integer shifei;
 		
 	/**
-	 * 灌溉浇水
+	 * 养殖环境
 	 */
 	
 	private Integer guangaijiaoshui;
 		
 	/**
-	 * 播种时间
+	 * 入栏时间
 	 */
 		
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -71,7 +71,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	private Date bozhongshijian;
 		
 	/**
-	 * 果蔬场地
+	 * 生猪场地
 	 */
 	
 	private String guoshuchangdi;
@@ -104,7 +104,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬类型
+	 * 设置：生猪批次
 	 */
 	 
 	public void setGuoshuleixing(String guoshuleixing) {
@@ -112,7 +112,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬类型
+	 * 获取：生猪批次
 	 */
 	public String getGuoshuleixing() {
 		return guoshuleixing;
@@ -120,7 +120,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	 
 	public void setGuoshutupian(String guoshutupian) {
@@ -128,7 +128,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
@@ -152,7 +152,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：种植数量
+	 * 设置：养殖数量
 	 */
 	 
 	public void setZhongzhishuliang(Integer zhongzhishuliang) {
@@ -160,7 +160,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：种植数量
+	 * 获取：养殖数量
 	 */
 	public Integer getZhongzhishuliang() {
 		return zhongzhishuliang;
@@ -168,7 +168,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：病虫害防治
+	 * 设置：病害防治
 	 */
 	 
 	public void setBingchonghaifangzhi(String bingchonghaifangzhi) {
@@ -176,7 +176,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：病虫害防治
+	 * 获取：病害防治
 	 */
 	public String getBingchonghaifangzhi() {
 		return bingchonghaifangzhi;
@@ -184,7 +184,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：施肥
+	 * 设置：饲料投喂记录
 	 */
 	 
 	public void setShifei(Integer shifei) {
@@ -192,7 +192,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：施肥
+	 * 获取：饲料投喂记录
 	 */
 	public Integer getShifei() {
 		return shifei;
@@ -200,7 +200,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：灌溉浇水
+	 * 设置：养殖环境
 	 */
 	 
 	public void setGuangaijiaoshui(Integer guangaijiaoshui) {
@@ -208,7 +208,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：灌溉浇水
+	 * 获取：养殖环境
 	 */
 	public Integer getGuangaijiaoshui() {
 		return guangaijiaoshui;
@@ -216,7 +216,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：播种时间
+	 * 设置：入栏时间
 	 */
 	 
 	public void setBozhongshijian(Date bozhongshijian) {
@@ -224,7 +224,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：播种时间
+	 * 获取：入栏时间
 	 */
 	public Date getBozhongshijian() {
 		return bozhongshijian;
@@ -232,7 +232,7 @@ public class GuoshuxinxiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬场地
+	 * 设置：生猪场地
 	 */
 	 
 	public void setGuoshuchangdi(String guoshuchangdi) {
@@ -240,7 +240,7 @@ public class GuoshuxinxiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬场地
+	 * 获取：生猪场地
 	 */
 	public String getGuoshuchangdi() {
 		return guoshuchangdi;

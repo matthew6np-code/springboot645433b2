@@ -98,7 +98,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '果蔬信息评论表'
+            name: '生猪信息评论表'
           }
         ],
         formSearch: {

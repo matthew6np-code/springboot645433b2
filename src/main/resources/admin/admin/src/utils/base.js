@@ -9,7 +9,7 @@ const base = {
     },
     getProjectName(){
         return {
-            projectName: "农产品溯源管理系统"
+            projectName: "生猪溯源管理系统"
         } 
     }
 }

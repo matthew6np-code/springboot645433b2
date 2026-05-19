@@ -20,11 +20,11 @@
                     </div>
 				</div>
 				<div class="item" :style='{"padding":"0 10px","margin":"0 0 4px 0","borderColor":"#f3f3f3","background":"#fff","borderWidth":"0 0 1px","display":"flex","borderStyle":"solid","justifyContent":"spaceBetween"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#999","textAlign":"right","width":"auto","fontSize":"14px","lineHeight":"36px","height":"36px"}'>采摘数量</div>
+					<div class="lable" :style='{"padding":"0 10px","color":"#999","textAlign":"right","width":"auto","fontSize":"14px","lineHeight":"36px","height":"36px"}'>屠宰加工管理数量</div>
 					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#666","flex":"1","height":"auto"}'>{{detail.zhongzhishuliang}}</div>
 				</div>
 				<div class="item" :style='{"padding":"0 10px","margin":"0 0 4px 0","borderColor":"#f3f3f3","background":"#fff","borderWidth":"0 0 1px","display":"flex","borderStyle":"solid","justifyContent":"spaceBetween"}'>
-					<div class="lable" :style='{"padding":"0 10px","color":"#999","textAlign":"right","width":"auto","fontSize":"14px","lineHeight":"36px","height":"36px"}'>采摘时间</div>
+					<div class="lable" :style='{"padding":"0 10px","color":"#999","textAlign":"right","width":"auto","fontSize":"14px","lineHeight":"36px","height":"36px"}'>屠宰加工管理时间</div>
 					<div  :style='{"padding":"8px 10px 0","fontSize":"14px","lineHeight":"24px","color":"#666","flex":"1","height":"auto"}'>{{detail.caizhaishijian}}</div>
 				</div>
 				<div class="btn" :style='{"padding":"10px 20px","flexWrap":"wrap","display":"flex"}'>
@@ -74,7 +74,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '采摘'
+            name: '屠宰加工管理'
           }
         ],
         title: '',
@@ -225,7 +225,7 @@
 		},
 		// 删除
 		async delClick(){
-			await this.$confirm('是否删除此采摘？')
+			await this.$confirm('是否删除此屠宰加工管理？')
 			  .then(_ => {
 			    this.$http.post('caizhai/delete', [this.detail.id]).then(async res => {
 					if (res.data.code == 0) {

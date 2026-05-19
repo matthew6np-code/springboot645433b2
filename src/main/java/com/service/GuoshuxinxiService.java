@@ -12,7 +12,7 @@ import com.entity.view.GuoshuxinxiView;
 
 
 /**
- * 果蔬信息
+ * 生猪信息
  *
  * @author 
  * @email 

@@ -22,7 +22,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 
 
 /**
- * 浇水
+ * 饲养环境
  * 数据库通用操作实体类（普通增删改查）
  * @author 
  * @email 
@@ -52,19 +52,19 @@ public class JiaoshuiEntity<T> implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long id;
 	/**
-	 * 果蔬名称
+	 * 生猪名称
 	 */
 					
 	private String guoshumingcheng;
 	
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 					
 	private String guoshutupian;
 	
 	/**
-	 * 灌溉浇水
+	 * 养殖环境
 	 */
 					
 	private Integer guangaijiaoshui;
@@ -97,37 +97,37 @@ public class JiaoshuiEntity<T> implements Serializable {
 		this.id = id;
 	}
 	/**
-	 * 设置：果蔬名称
+	 * 设置：生猪名称
 	 */
 	public void setGuoshumingcheng(String guoshumingcheng) {
 		this.guoshumingcheng = guoshumingcheng;
 	}
 	/**
-	 * 获取：果蔬名称
+	 * 获取：生猪名称
 	 */
 	public String getGuoshumingcheng() {
 		return guoshumingcheng;
 	}
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	public void setGuoshutupian(String guoshutupian) {
 		this.guoshutupian = guoshutupian;
 	}
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
 	}
 	/**
-	 * 设置：灌溉浇水
+	 * 设置：养殖环境
 	 */
 	public void setGuangaijiaoshui(Integer guangaijiaoshui) {
 		this.guangaijiaoshui = guangaijiaoshui;
 	}
 	/**
-	 * 获取：灌溉浇水
+	 * 获取：养殖环境
 	 */
 	public Integer getGuangaijiaoshui() {
 		return guangaijiaoshui;

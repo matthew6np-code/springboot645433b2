@@ -65,12 +65,12 @@ DROP TABLE IF EXISTS `caizhai`;
 CREATE TABLE `caizhai` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '果蔬名称',
-  `guoshutupian` longtext COMMENT '果蔬图片',
-  `zhongzhishuliang` int(11) DEFAULT NULL COMMENT '采摘数量',
-  `caizhaishijian` datetime DEFAULT NULL COMMENT '采摘时间',
+  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '生猪名称',
+  `guoshutupian` longtext COMMENT '生猪图片',
+  `zhongzhishuliang` int(11) DEFAULT NULL COMMENT '屠宰加工管理数量',
+  `caizhaishijian` datetime DEFAULT NULL COMMENT '屠宰加工管理时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COMMENT='采摘';
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COMMENT='屠宰加工管理';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,7 +79,7 @@ CREATE TABLE `caizhai` (
 
 LOCK TABLES `caizhai` WRITE;
 /*!40000 ALTER TABLE `caizhai` DISABLE KEYS */;
-INSERT INTO `caizhai` VALUES (61,'2024-04-18 06:01:40','果蔬名称1','upload/caizhai_guoshutupian1.jpg,upload/caizhai_guoshutupian2.jpg,upload/caizhai_guoshutupian3.jpg',1,'2024-04-18 14:01:40'),(62,'2024-04-18 06:01:40','果蔬名称2','upload/caizhai_guoshutupian2.jpg,upload/caizhai_guoshutupian3.jpg,upload/caizhai_guoshutupian4.jpg',2,'2024-04-18 14:01:40'),(63,'2024-04-18 06:01:40','果蔬名称3','upload/caizhai_guoshutupian3.jpg,upload/caizhai_guoshutupian4.jpg,upload/caizhai_guoshutupian5.jpg',3,'2024-04-18 14:01:40'),(64,'2024-04-18 06:01:40','果蔬名称4','upload/caizhai_guoshutupian4.jpg,upload/caizhai_guoshutupian5.jpg,upload/caizhai_guoshutupian6.jpg',4,'2024-04-18 14:01:40'),(65,'2024-04-18 06:01:40','果蔬名称5','upload/caizhai_guoshutupian5.jpg,upload/caizhai_guoshutupian6.jpg,upload/caizhai_guoshutupian7.jpg',5,'2024-04-18 14:01:40'),(66,'2024-04-18 06:01:40','果蔬名称6','upload/caizhai_guoshutupian6.jpg,upload/caizhai_guoshutupian7.jpg,upload/caizhai_guoshutupian8.jpg',6,'2024-04-18 14:01:40'),(67,'2024-04-18 06:01:40','果蔬名称7','upload/caizhai_guoshutupian7.jpg,upload/caizhai_guoshutupian8.jpg,upload/caizhai_guoshutupian9.jpg',7,'2024-04-18 14:01:40'),(68,'2024-04-18 06:01:40','果蔬名称8','upload/caizhai_guoshutupian8.jpg,upload/caizhai_guoshutupian9.jpg,upload/caizhai_guoshutupian10.jpg',8,'2024-04-18 14:01:40');
+INSERT INTO `caizhai` VALUES (61,'2024-04-18 06:01:40','生猪名称1','upload/caizhai_guoshutupian1.jpg,upload/caizhai_guoshutupian2.jpg,upload/caizhai_guoshutupian3.jpg',1,'2024-04-18 14:01:40'),(62,'2024-04-18 06:01:40','生猪名称2','upload/caizhai_guoshutupian2.jpg,upload/caizhai_guoshutupian3.jpg,upload/caizhai_guoshutupian4.jpg',2,'2024-04-18 14:01:40'),(63,'2024-04-18 06:01:40','生猪名称3','upload/caizhai_guoshutupian3.jpg,upload/caizhai_guoshutupian4.jpg,upload/caizhai_guoshutupian5.jpg',3,'2024-04-18 14:01:40'),(64,'2024-04-18 06:01:40','生猪名称4','upload/caizhai_guoshutupian4.jpg,upload/caizhai_guoshutupian5.jpg,upload/caizhai_guoshutupian6.jpg',4,'2024-04-18 14:01:40'),(65,'2024-04-18 06:01:40','生猪名称5','upload/caizhai_guoshutupian5.jpg,upload/caizhai_guoshutupian6.jpg,upload/caizhai_guoshutupian7.jpg',5,'2024-04-18 14:01:40'),(66,'2024-04-18 06:01:40','生猪名称6','upload/caizhai_guoshutupian6.jpg,upload/caizhai_guoshutupian7.jpg,upload/caizhai_guoshutupian8.jpg',6,'2024-04-18 14:01:40'),(67,'2024-04-18 06:01:40','生猪名称7','upload/caizhai_guoshutupian7.jpg,upload/caizhai_guoshutupian8.jpg,upload/caizhai_guoshutupian9.jpg',7,'2024-04-18 14:01:40'),(68,'2024-04-18 06:01:40','生猪名称8','upload/caizhai_guoshutupian8.jpg,upload/caizhai_guoshutupian9.jpg,upload/caizhai_guoshutupian10.jpg',8,'2024-04-18 14:01:40');
 /*!40000 ALTER TABLE `caizhai` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,7 +126,7 @@ CREATE TABLE `discussguoshuxinxi` (
   `content` longtext NOT NULL COMMENT '评论内容',
   `reply` longtext COMMENT '回复内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='果蔬信息评论表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='生猪信息评论表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -148,9 +148,9 @@ DROP TABLE IF EXISTS `guoshuleixing`;
 CREATE TABLE `guoshuleixing` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `guoshuleixing` varchar(200) DEFAULT NULL COMMENT '果蔬类型',
+  `guoshuleixing` varchar(200) DEFAULT NULL COMMENT '生猪批次',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COMMENT='果蔬类型';
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COMMENT='生猪批次';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,7 +159,7 @@ CREATE TABLE `guoshuleixing` (
 
 LOCK TABLES `guoshuleixing` WRITE;
 /*!40000 ALTER TABLE `guoshuleixing` DISABLE KEYS */;
-INSERT INTO `guoshuleixing` VALUES (31,'2024-04-18 06:01:40','果蔬类型1'),(32,'2024-04-18 06:01:40','果蔬类型2'),(33,'2024-04-18 06:01:40','果蔬类型3'),(34,'2024-04-18 06:01:40','果蔬类型4'),(35,'2024-04-18 06:01:40','果蔬类型5'),(36,'2024-04-18 06:01:40','果蔬类型6'),(37,'2024-04-18 06:01:40','果蔬类型7'),(38,'2024-04-18 06:01:40','果蔬类型8');
+INSERT INTO `guoshuleixing` VALUES (31,'2024-04-18 06:01:40','生猪批次1'),(32,'2024-04-18 06:01:40','生猪批次2'),(33,'2024-04-18 06:01:40','生猪批次3'),(34,'2024-04-18 06:01:40','生猪批次4'),(35,'2024-04-18 06:01:40','生猪批次5'),(36,'2024-04-18 06:01:40','生猪批次6'),(37,'2024-04-18 06:01:40','生猪批次7'),(38,'2024-04-18 06:01:40','生猪批次8');
 /*!40000 ALTER TABLE `guoshuleixing` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -173,15 +173,15 @@ DROP TABLE IF EXISTS `guoshushengchandi`;
 CREATE TABLE `guoshushengchandi` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '果蔬名称',
-  `guoshutupian` longtext COMMENT '果蔬图片',
+  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '生猪名称',
+  `guoshutupian` longtext COMMENT '生猪图片',
   `shengchandidian` varchar(200) DEFAULT NULL COMMENT '生产地点',
   `turangqingkuang` varchar(200) DEFAULT NULL COMMENT '土壤情况',
   `diliweizhi` varchar(200) DEFAULT NULL COMMENT '地理位置',
   `shuiziyuan` varchar(200) DEFAULT NULL COMMENT '水资源',
   `qihoutiaojian` varchar(200) DEFAULT NULL COMMENT '气候条件',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COMMENT='果蔬生产地';
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COMMENT='养殖场';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -190,7 +190,7 @@ CREATE TABLE `guoshushengchandi` (
 
 LOCK TABLES `guoshushengchandi` WRITE;
 /*!40000 ALTER TABLE `guoshushengchandi` DISABLE KEYS */;
-INSERT INTO `guoshushengchandi` VALUES (71,'2024-04-18 06:01:40','果蔬名称1','upload/guoshushengchandi_guoshutupian1.jpg,upload/guoshushengchandi_guoshutupian2.jpg,upload/guoshushengchandi_guoshutupian3.jpg','生产地点1','土壤情况1','地理位置1','水资源1','气候条件1'),(72,'2024-04-18 06:01:40','果蔬名称2','upload/guoshushengchandi_guoshutupian2.jpg,upload/guoshushengchandi_guoshutupian3.jpg,upload/guoshushengchandi_guoshutupian4.jpg','生产地点2','土壤情况2','地理位置2','水资源2','气候条件2'),(73,'2024-04-18 06:01:40','果蔬名称3','upload/guoshushengchandi_guoshutupian3.jpg,upload/guoshushengchandi_guoshutupian4.jpg,upload/guoshushengchandi_guoshutupian5.jpg','生产地点3','土壤情况3','地理位置3','水资源3','气候条件3'),(74,'2024-04-18 06:01:40','果蔬名称4','upload/guoshushengchandi_guoshutupian4.jpg,upload/guoshushengchandi_guoshutupian5.jpg,upload/guoshushengchandi_guoshutupian6.jpg','生产地点4','土壤情况4','地理位置4','水资源4','气候条件4'),(75,'2024-04-18 06:01:40','果蔬名称5','upload/guoshushengchandi_guoshutupian5.jpg,upload/guoshushengchandi_guoshutupian6.jpg,upload/guoshushengchandi_guoshutupian7.jpg','生产地点5','土壤情况5','地理位置5','水资源5','气候条件5'),(76,'2024-04-18 06:01:40','果蔬名称6','upload/guoshushengchandi_guoshutupian6.jpg,upload/guoshushengchandi_guoshutupian7.jpg,upload/guoshushengchandi_guoshutupian8.jpg','生产地点6','土壤情况6','地理位置6','水资源6','气候条件6'),(77,'2024-04-18 06:01:40','果蔬名称7','upload/guoshushengchandi_guoshutupian7.jpg,upload/guoshushengchandi_guoshutupian8.jpg,upload/guoshushengchandi_guoshutupian9.jpg','生产地点7','土壤情况7','地理位置7','水资源7','气候条件7'),(78,'2024-04-18 06:01:40','果蔬名称8','upload/guoshushengchandi_guoshutupian8.jpg,upload/guoshushengchandi_guoshutupian9.jpg,upload/guoshushengchandi_guoshutupian10.jpg','生产地点8','土壤情况8','地理位置8','水资源8','气候条件8');
+INSERT INTO `guoshushengchandi` VALUES (71,'2024-04-18 06:01:40','生猪名称1','upload/guoshushengchandi_guoshutupian1.jpg,upload/guoshushengchandi_guoshutupian2.jpg,upload/guoshushengchandi_guoshutupian3.jpg','生产地点1','土壤情况1','地理位置1','水资源1','气候条件1'),(72,'2024-04-18 06:01:40','生猪名称2','upload/guoshushengchandi_guoshutupian2.jpg,upload/guoshushengchandi_guoshutupian3.jpg,upload/guoshushengchandi_guoshutupian4.jpg','生产地点2','土壤情况2','地理位置2','水资源2','气候条件2'),(73,'2024-04-18 06:01:40','生猪名称3','upload/guoshushengchandi_guoshutupian3.jpg,upload/guoshushengchandi_guoshutupian4.jpg,upload/guoshushengchandi_guoshutupian5.jpg','生产地点3','土壤情况3','地理位置3','水资源3','气候条件3'),(74,'2024-04-18 06:01:40','生猪名称4','upload/guoshushengchandi_guoshutupian4.jpg,upload/guoshushengchandi_guoshutupian5.jpg,upload/guoshushengchandi_guoshutupian6.jpg','生产地点4','土壤情况4','地理位置4','水资源4','气候条件4'),(75,'2024-04-18 06:01:40','生猪名称5','upload/guoshushengchandi_guoshutupian5.jpg,upload/guoshushengchandi_guoshutupian6.jpg,upload/guoshushengchandi_guoshutupian7.jpg','生产地点5','土壤情况5','地理位置5','水资源5','气候条件5'),(76,'2024-04-18 06:01:40','生猪名称6','upload/guoshushengchandi_guoshutupian6.jpg,upload/guoshushengchandi_guoshutupian7.jpg,upload/guoshushengchandi_guoshutupian8.jpg','生产地点6','土壤情况6','地理位置6','水资源6','气候条件6'),(77,'2024-04-18 06:01:40','生猪名称7','upload/guoshushengchandi_guoshutupian7.jpg,upload/guoshushengchandi_guoshutupian8.jpg,upload/guoshushengchandi_guoshutupian9.jpg','生产地点7','土壤情况7','地理位置7','水资源7','气候条件7'),(78,'2024-04-18 06:01:40','生猪名称8','upload/guoshushengchandi_guoshutupian8.jpg,upload/guoshushengchandi_guoshutupian9.jpg,upload/guoshushengchandi_guoshutupian10.jpg','生产地点8','土壤情况8','地理位置8','水资源8','气候条件8');
 /*!40000 ALTER TABLE `guoshushengchandi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -204,22 +204,22 @@ DROP TABLE IF EXISTS `guoshuxinxi`;
 CREATE TABLE `guoshuxinxi` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '果蔬名称',
-  `guoshuleixing` varchar(200) DEFAULT NULL COMMENT '果蔬类型',
-  `guoshutupian` longtext COMMENT '果蔬图片',
+  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '生猪名称',
+  `guoshuleixing` varchar(200) DEFAULT NULL COMMENT '生猪批次',
+  `guoshutupian` longtext COMMENT '生猪图片',
   `shengzhangjieduan` varchar(200) DEFAULT NULL COMMENT '生长阶段',
-  `zhongzhishuliang` int(11) DEFAULT NULL COMMENT '种植数量',
-  `bingchonghaifangzhi` varchar(200) DEFAULT NULL COMMENT '病虫害防治',
-  `shifei` int(11) DEFAULT NULL COMMENT '施肥',
-  `guangaijiaoshui` int(11) DEFAULT NULL COMMENT '灌溉浇水',
-  `bozhongshijian` datetime DEFAULT NULL COMMENT '播种时间',
-  `guoshuchangdi` varchar(200) DEFAULT NULL COMMENT '果蔬场地',
+  `zhongzhishuliang` int(11) DEFAULT NULL COMMENT '养殖数量',
+  `bingchonghaifangzhi` varchar(200) DEFAULT NULL COMMENT '病害防治',
+  `shifei` int(11) DEFAULT NULL COMMENT '饲料投喂记录',
+  `guangaijiaoshui` int(11) DEFAULT NULL COMMENT '养殖环境',
+  `bozhongshijian` datetime DEFAULT NULL COMMENT '入栏时间',
+  `guoshuchangdi` varchar(200) DEFAULT NULL COMMENT '生猪场地',
   `yunshufangshi` varchar(200) DEFAULT NULL COMMENT '运输方式',
   `yunshushijian` varchar(200) DEFAULT NULL COMMENT '运输时间',
   `fabushijian` datetime DEFAULT NULL COMMENT '发布时间',
   `discussnum` int(11) DEFAULT '0' COMMENT '评论数',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='果蔬信息';
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='生猪信息';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -228,7 +228,7 @@ CREATE TABLE `guoshuxinxi` (
 
 LOCK TABLES `guoshuxinxi` WRITE;
 /*!40000 ALTER TABLE `guoshuxinxi` DISABLE KEYS */;
-INSERT INTO `guoshuxinxi` VALUES (21,'2024-04-18 06:01:40','果蔬名称1','果蔬类型1','upload/guoshuxinxi_guoshutupian1.jpg,upload/guoshuxinxi_guoshutupian2.jpg,upload/guoshuxinxi_guoshutupian3.jpg','苗期',1,'病虫害防治1',1,1,'2024-04-18 14:01:40','果蔬场地1','运输方式1','运输时间1','2024-04-18 14:01:40',0),(22,'2024-04-18 06:01:40','果蔬名称2','果蔬类型2','upload/guoshuxinxi_guoshutupian2.jpg,upload/guoshuxinxi_guoshutupian3.jpg,upload/guoshuxinxi_guoshutupian4.jpg','苗期',2,'病虫害防治2',2,2,'2024-04-18 14:01:40','果蔬场地2','运输方式2','运输时间2','2024-04-18 14:01:40',0),(23,'2024-04-18 06:01:40','果蔬名称3','果蔬类型3','upload/guoshuxinxi_guoshutupian3.jpg,upload/guoshuxinxi_guoshutupian4.jpg,upload/guoshuxinxi_guoshutupian5.jpg','苗期',3,'病虫害防治3',3,3,'2024-04-18 14:01:40','果蔬场地3','运输方式3','运输时间3','2024-04-18 14:01:40',0),(24,'2024-04-18 06:01:40','果蔬名称4','果蔬类型4','upload/guoshuxinxi_guoshutupian4.jpg,upload/guoshuxinxi_guoshutupian5.jpg,upload/guoshuxinxi_guoshutupian6.jpg','苗期',4,'病虫害防治4',4,4,'2024-04-18 14:01:40','果蔬场地4','运输方式4','运输时间4','2024-04-18 14:01:40',0),(25,'2024-04-18 06:01:40','果蔬名称5','果蔬类型5','upload/guoshuxinxi_guoshutupian5.jpg,upload/guoshuxinxi_guoshutupian6.jpg,upload/guoshuxinxi_guoshutupian7.jpg','苗期',5,'病虫害防治5',5,5,'2024-04-18 14:01:40','果蔬场地5','运输方式5','运输时间5','2024-04-18 14:01:40',0),(26,'2024-04-18 06:01:40','果蔬名称6','果蔬类型6','upload/guoshuxinxi_guoshutupian6.jpg,upload/guoshuxinxi_guoshutupian7.jpg,upload/guoshuxinxi_guoshutupian8.jpg','苗期',6,'病虫害防治6',6,6,'2024-04-18 14:01:40','果蔬场地6','运输方式6','运输时间6','2024-04-18 14:01:40',0),(27,'2024-04-18 06:01:40','果蔬名称7','果蔬类型7','upload/guoshuxinxi_guoshutupian7.jpg,upload/guoshuxinxi_guoshutupian8.jpg,upload/guoshuxinxi_guoshutupian9.jpg','苗期',7,'病虫害防治7',7,7,'2024-04-18 14:01:40','果蔬场地7','运输方式7','运输时间7','2024-04-18 14:01:40',0),(28,'2024-04-18 06:01:40','果蔬名称8','果蔬类型8','upload/guoshuxinxi_guoshutupian8.jpg,upload/guoshuxinxi_guoshutupian9.jpg,upload/guoshuxinxi_guoshutupian10.jpg','苗期',8,'病虫害防治8',8,8,'2024-04-18 14:01:40','果蔬场地8','运输方式8','运输时间8','2024-04-18 14:01:40',0);
+INSERT INTO `guoshuxinxi` VALUES (21,'2024-04-18 06:01:40','生猪名称1','生猪批次1','upload/guoshuxinxi_guoshutupian1.jpg,upload/guoshuxinxi_guoshutupian2.jpg,upload/guoshuxinxi_guoshutupian3.jpg','苗期',1,'病害防治1',1,1,'2024-04-18 14:01:40','生猪场地1','运输方式1','运输时间1','2024-04-18 14:01:40',0),(22,'2024-04-18 06:01:40','生猪名称2','生猪批次2','upload/guoshuxinxi_guoshutupian2.jpg,upload/guoshuxinxi_guoshutupian3.jpg,upload/guoshuxinxi_guoshutupian4.jpg','苗期',2,'病害防治2',2,2,'2024-04-18 14:01:40','生猪场地2','运输方式2','运输时间2','2024-04-18 14:01:40',0),(23,'2024-04-18 06:01:40','生猪名称3','生猪批次3','upload/guoshuxinxi_guoshutupian3.jpg,upload/guoshuxinxi_guoshutupian4.jpg,upload/guoshuxinxi_guoshutupian5.jpg','苗期',3,'病害防治3',3,3,'2024-04-18 14:01:40','生猪场地3','运输方式3','运输时间3','2024-04-18 14:01:40',0),(24,'2024-04-18 06:01:40','生猪名称4','生猪批次4','upload/guoshuxinxi_guoshutupian4.jpg,upload/guoshuxinxi_guoshutupian5.jpg,upload/guoshuxinxi_guoshutupian6.jpg','苗期',4,'病害防治4',4,4,'2024-04-18 14:01:40','生猪场地4','运输方式4','运输时间4','2024-04-18 14:01:40',0),(25,'2024-04-18 06:01:40','生猪名称5','生猪批次5','upload/guoshuxinxi_guoshutupian5.jpg,upload/guoshuxinxi_guoshutupian6.jpg,upload/guoshuxinxi_guoshutupian7.jpg','苗期',5,'病害防治5',5,5,'2024-04-18 14:01:40','生猪场地5','运输方式5','运输时间5','2024-04-18 14:01:40',0),(26,'2024-04-18 06:01:40','生猪名称6','生猪批次6','upload/guoshuxinxi_guoshutupian6.jpg,upload/guoshuxinxi_guoshutupian7.jpg,upload/guoshuxinxi_guoshutupian8.jpg','苗期',6,'病害防治6',6,6,'2024-04-18 14:01:40','生猪场地6','运输方式6','运输时间6','2024-04-18 14:01:40',0),(27,'2024-04-18 06:01:40','生猪名称7','生猪批次7','upload/guoshuxinxi_guoshutupian7.jpg,upload/guoshuxinxi_guoshutupian8.jpg,upload/guoshuxinxi_guoshutupian9.jpg','苗期',7,'病害防治7',7,7,'2024-04-18 14:01:40','生猪场地7','运输方式7','运输时间7','2024-04-18 14:01:40',0),(28,'2024-04-18 06:01:40','生猪名称8','生猪批次8','upload/guoshuxinxi_guoshutupian8.jpg,upload/guoshuxinxi_guoshutupian9.jpg,upload/guoshuxinxi_guoshutupian10.jpg','苗期',8,'病害防治8',8,8,'2024-04-18 14:01:40','生猪场地8','运输方式8','运输时间8','2024-04-18 14:01:40',0);
 /*!40000 ALTER TABLE `guoshuxinxi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -242,12 +242,12 @@ DROP TABLE IF EXISTS `jiaoshui`;
 CREATE TABLE `jiaoshui` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '果蔬名称',
-  `guoshutupian` longtext COMMENT '果蔬图片',
-  `guangaijiaoshui` int(11) DEFAULT NULL COMMENT '灌溉浇水',
+  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '生猪名称',
+  `guoshutupian` longtext COMMENT '生猪图片',
+  `guangaijiaoshui` int(11) DEFAULT NULL COMMENT '养殖环境',
   `guangaishijian` datetime DEFAULT NULL COMMENT '灌溉时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 COMMENT='浇水';
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 COMMENT='饲养环境';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -256,7 +256,7 @@ CREATE TABLE `jiaoshui` (
 
 LOCK TABLES `jiaoshui` WRITE;
 /*!40000 ALTER TABLE `jiaoshui` DISABLE KEYS */;
-INSERT INTO `jiaoshui` VALUES (51,'2024-04-18 06:01:40','果蔬名称1','upload/jiaoshui_guoshutupian1.jpg,upload/jiaoshui_guoshutupian2.jpg,upload/jiaoshui_guoshutupian3.jpg',1,'2024-04-18 14:01:40'),(52,'2024-04-18 06:01:40','果蔬名称2','upload/jiaoshui_guoshutupian2.jpg,upload/jiaoshui_guoshutupian3.jpg,upload/jiaoshui_guoshutupian4.jpg',1,'2024-04-18 14:01:40'),(53,'2024-04-18 06:01:40','果蔬名称3','upload/jiaoshui_guoshutupian3.jpg,upload/jiaoshui_guoshutupian4.jpg,upload/jiaoshui_guoshutupian5.jpg',1,'2024-04-18 14:01:40'),(54,'2024-04-18 06:01:40','果蔬名称4','upload/jiaoshui_guoshutupian4.jpg,upload/jiaoshui_guoshutupian5.jpg,upload/jiaoshui_guoshutupian6.jpg',1,'2024-04-18 14:01:40'),(55,'2024-04-18 06:01:40','果蔬名称5','upload/jiaoshui_guoshutupian5.jpg,upload/jiaoshui_guoshutupian6.jpg,upload/jiaoshui_guoshutupian7.jpg',1,'2024-04-18 14:01:40'),(56,'2024-04-18 06:01:40','果蔬名称6','upload/jiaoshui_guoshutupian6.jpg,upload/jiaoshui_guoshutupian7.jpg,upload/jiaoshui_guoshutupian8.jpg',1,'2024-04-18 14:01:40'),(57,'2024-04-18 06:01:40','果蔬名称7','upload/jiaoshui_guoshutupian7.jpg,upload/jiaoshui_guoshutupian8.jpg,upload/jiaoshui_guoshutupian9.jpg',1,'2024-04-18 14:01:40'),(58,'2024-04-18 06:01:40','果蔬名称8','upload/jiaoshui_guoshutupian8.jpg,upload/jiaoshui_guoshutupian9.jpg,upload/jiaoshui_guoshutupian10.jpg',1,'2024-04-18 14:01:40');
+INSERT INTO `jiaoshui` VALUES (51,'2024-04-18 06:01:40','生猪名称1','upload/jiaoshui_guoshutupian1.jpg,upload/jiaoshui_guoshutupian2.jpg,upload/jiaoshui_guoshutupian3.jpg',1,'2024-04-18 14:01:40'),(52,'2024-04-18 06:01:40','生猪名称2','upload/jiaoshui_guoshutupian2.jpg,upload/jiaoshui_guoshutupian3.jpg,upload/jiaoshui_guoshutupian4.jpg',1,'2024-04-18 14:01:40'),(53,'2024-04-18 06:01:40','生猪名称3','upload/jiaoshui_guoshutupian3.jpg,upload/jiaoshui_guoshutupian4.jpg,upload/jiaoshui_guoshutupian5.jpg',1,'2024-04-18 14:01:40'),(54,'2024-04-18 06:01:40','生猪名称4','upload/jiaoshui_guoshutupian4.jpg,upload/jiaoshui_guoshutupian5.jpg,upload/jiaoshui_guoshutupian6.jpg',1,'2024-04-18 14:01:40'),(55,'2024-04-18 06:01:40','生猪名称5','upload/jiaoshui_guoshutupian5.jpg,upload/jiaoshui_guoshutupian6.jpg,upload/jiaoshui_guoshutupian7.jpg',1,'2024-04-18 14:01:40'),(56,'2024-04-18 06:01:40','生猪名称6','upload/jiaoshui_guoshutupian6.jpg,upload/jiaoshui_guoshutupian7.jpg,upload/jiaoshui_guoshutupian8.jpg',1,'2024-04-18 14:01:40'),(57,'2024-04-18 06:01:40','生猪名称7','upload/jiaoshui_guoshutupian7.jpg,upload/jiaoshui_guoshutupian8.jpg,upload/jiaoshui_guoshutupian9.jpg',1,'2024-04-18 14:01:40'),(58,'2024-04-18 06:01:40','生猪名称8','upload/jiaoshui_guoshutupian8.jpg,upload/jiaoshui_guoshutupian9.jpg,upload/jiaoshui_guoshutupian10.jpg',1,'2024-04-18 14:01:40');
 /*!40000 ALTER TABLE `jiaoshui` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,7 +283,7 @@ CREATE TABLE `news` (
   `picture` longtext NOT NULL COMMENT '图片',
   `content` longtext NOT NULL COMMENT '内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8 COMMENT='果蔬生产资讯';
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8 COMMENT='生猪市场资讯';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -308,7 +308,7 @@ CREATE TABLE `newstype` (
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `typename` varchar(200) NOT NULL COMMENT '分类名称',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8 COMMENT='果蔬生产资讯分类';
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8 COMMENT='生猪市场资讯分类';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -331,12 +331,12 @@ DROP TABLE IF EXISTS `shifei`;
 CREATE TABLE `shifei` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '果蔬名称',
-  `guoshutupian` longtext COMMENT '果蔬图片',
-  `shifei` int(11) DEFAULT NULL COMMENT '施肥',
-  `shifeishijian` datetime DEFAULT NULL COMMENT '施肥时间',
+  `guoshumingcheng` varchar(200) DEFAULT NULL COMMENT '生猪名称',
+  `guoshutupian` longtext COMMENT '生猪图片',
+  `shifei` int(11) DEFAULT NULL COMMENT '饲料投喂记录',
+  `shifeishijian` datetime DEFAULT NULL COMMENT '饲料投喂记录时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COMMENT='施肥';
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COMMENT='饲料投喂记录';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -345,7 +345,7 @@ CREATE TABLE `shifei` (
 
 LOCK TABLES `shifei` WRITE;
 /*!40000 ALTER TABLE `shifei` DISABLE KEYS */;
-INSERT INTO `shifei` VALUES (41,'2024-04-18 06:01:40','果蔬名称1','upload/shifei_guoshutupian1.jpg,upload/shifei_guoshutupian2.jpg,upload/shifei_guoshutupian3.jpg',1,'2024-04-18 14:01:40'),(42,'2024-04-18 06:01:40','果蔬名称2','upload/shifei_guoshutupian2.jpg,upload/shifei_guoshutupian3.jpg,upload/shifei_guoshutupian4.jpg',1,'2024-04-18 14:01:40'),(43,'2024-04-18 06:01:40','果蔬名称3','upload/shifei_guoshutupian3.jpg,upload/shifei_guoshutupian4.jpg,upload/shifei_guoshutupian5.jpg',1,'2024-04-18 14:01:40'),(44,'2024-04-18 06:01:40','果蔬名称4','upload/shifei_guoshutupian4.jpg,upload/shifei_guoshutupian5.jpg,upload/shifei_guoshutupian6.jpg',1,'2024-04-18 14:01:40'),(45,'2024-04-18 06:01:40','果蔬名称5','upload/shifei_guoshutupian5.jpg,upload/shifei_guoshutupian6.jpg,upload/shifei_guoshutupian7.jpg',1,'2024-04-18 14:01:40'),(46,'2024-04-18 06:01:40','果蔬名称6','upload/shifei_guoshutupian6.jpg,upload/shifei_guoshutupian7.jpg,upload/shifei_guoshutupian8.jpg',1,'2024-04-18 14:01:40'),(47,'2024-04-18 06:01:40','果蔬名称7','upload/shifei_guoshutupian7.jpg,upload/shifei_guoshutupian8.jpg,upload/shifei_guoshutupian9.jpg',1,'2024-04-18 14:01:40'),(48,'2024-04-18 06:01:40','果蔬名称8','upload/shifei_guoshutupian8.jpg,upload/shifei_guoshutupian9.jpg,upload/shifei_guoshutupian10.jpg',1,'2024-04-18 14:01:40');
+INSERT INTO `shifei` VALUES (41,'2024-04-18 06:01:40','生猪名称1','upload/shifei_guoshutupian1.jpg,upload/shifei_guoshutupian2.jpg,upload/shifei_guoshutupian3.jpg',1,'2024-04-18 14:01:40'),(42,'2024-04-18 06:01:40','生猪名称2','upload/shifei_guoshutupian2.jpg,upload/shifei_guoshutupian3.jpg,upload/shifei_guoshutupian4.jpg',1,'2024-04-18 14:01:40'),(43,'2024-04-18 06:01:40','生猪名称3','upload/shifei_guoshutupian3.jpg,upload/shifei_guoshutupian4.jpg,upload/shifei_guoshutupian5.jpg',1,'2024-04-18 14:01:40'),(44,'2024-04-18 06:01:40','生猪名称4','upload/shifei_guoshutupian4.jpg,upload/shifei_guoshutupian5.jpg,upload/shifei_guoshutupian6.jpg',1,'2024-04-18 14:01:40'),(45,'2024-04-18 06:01:40','生猪名称5','upload/shifei_guoshutupian5.jpg,upload/shifei_guoshutupian6.jpg,upload/shifei_guoshutupian7.jpg',1,'2024-04-18 14:01:40'),(46,'2024-04-18 06:01:40','生猪名称6','upload/shifei_guoshutupian6.jpg,upload/shifei_guoshutupian7.jpg,upload/shifei_guoshutupian8.jpg',1,'2024-04-18 14:01:40'),(47,'2024-04-18 06:01:40','生猪名称7','upload/shifei_guoshutupian7.jpg,upload/shifei_guoshutupian8.jpg,upload/shifei_guoshutupian9.jpg',1,'2024-04-18 14:01:40'),(48,'2024-04-18 06:01:40','生猪名称8','upload/shifei_guoshutupian8.jpg,upload/shifei_guoshutupian9.jpg,upload/shifei_guoshutupian10.jpg',1,'2024-04-18 14:01:40');
 /*!40000 ALTER TABLE `shifei` ENABLE KEYS */;
 UNLOCK TABLES;
 

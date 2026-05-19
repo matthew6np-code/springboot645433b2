@@ -22,7 +22,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 
 
 /**
- * 果蔬类型
+ * 生猪批次
  * 数据库通用操作实体类（普通增删改查）
  * @author 
  * @email 
@@ -52,7 +52,7 @@ public class GuoshuleixingEntity<T> implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long id;
 	/**
-	 * 果蔬类型
+	 * 生猪批次
 	 */
 					
 	private String guoshuleixing;
@@ -77,13 +77,13 @@ public class GuoshuleixingEntity<T> implements Serializable {
 		this.id = id;
 	}
 	/**
-	 * 设置：果蔬类型
+	 * 设置：生猪批次
 	 */
 	public void setGuoshuleixing(String guoshuleixing) {
 		this.guoshuleixing = guoshuleixing;
 	}
 	/**
-	 * 获取：果蔬类型
+	 * 获取：生猪批次
 	 */
 	public String getGuoshuleixing() {
 		return guoshuleixing;

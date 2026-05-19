@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 果蔬生产地
+ * 养殖场
  * 接收传参的实体类  
  *（实际开发中配合移动端接口开发手动去掉些没用的字段， 后端一般用entity就够用了） 
  * 取自ModelAndView 的model名称
@@ -24,7 +24,7 @@ public class GuoshushengchandiModel  implements Serializable {
 
 	 			
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 	
 	private String guoshutupian;
@@ -61,7 +61,7 @@ public class GuoshushengchandiModel  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	 
 	public void setGuoshutupian(String guoshutupian) {
@@ -69,7 +69,7 @@ public class GuoshushengchandiModel  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;

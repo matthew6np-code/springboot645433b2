@@ -86,7 +86,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '果蔬生产地'
+            name: '养殖场'
           }
         ],
         title: '',
@@ -237,7 +237,7 @@
 		},
 		// 删除
 		async delClick(){
-			await this.$confirm('是否删除此果蔬生产地？')
+			await this.$confirm('是否删除此养殖场？')
 			  .then(_ => {
 			    this.$http.post('guoshushengchandi/delete', [this.detail.id]).then(async res => {
 					if (res.data.code == 0) {

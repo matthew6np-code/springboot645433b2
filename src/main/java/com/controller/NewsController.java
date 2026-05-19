@@ -42,7 +42,7 @@ import com.service.StoreupService;
 import com.entity.StoreupEntity;
 
 /**
- * 果蔬生产资讯
+ * 生猪市场资讯
  * 后端接口
  * @author 
  * @email 
@@ -109,7 +109,7 @@ public class NewsController {
         EntityWrapper< NewsEntity> ew = new EntityWrapper< NewsEntity>();
  		ew.allEq(MPUtil.allEQMapPre( news, "news")); 
 		NewsView newsView =  newsService.selectView(ew);
-		return R.ok("查询果蔬生产资讯成功").put("data", newsView);
+		return R.ok("查询生猪市场资讯成功").put("data", newsView);
     }
 	
     /**

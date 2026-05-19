@@ -5,8 +5,8 @@
 			<el-form class="center-form-pv" :style='{"padding":"0px 0px 0","margin":"0px","overflow":"hidden","flexWrap":"wrap","background":"none","display":"flex","fontSize":"inherit"}' :inline="true" :model="searchForm">
 				<el-row :style='{"width":"100%","fontSize":"inherit","color":"#999","textAlign":"left","display":"block","order":"2"}' >
 					<div :style='{"margin":"0 0px 0 0","fontSize":"inherit","display":"inline-block"}'>
-						<label :style='{"margin":"0 10px 0 0","color":"inherit","display":"inline-block","lineHeight":"40px","fontSize":"inherit","fontWeight":"500","height":"40px"}' class="item-label">果蔬类型</label>
-						<el-input v-model="searchForm.guoshuleixing" placeholder="果蔬类型" @keydown.enter.native="search()" clearable></el-input>
+						<label :style='{"margin":"0 10px 0 0","color":"inherit","display":"inline-block","lineHeight":"40px","fontSize":"inherit","fontWeight":"500","height":"40px"}' class="item-label">生猪批次</label>
+						<el-input v-model="searchForm.guoshuleixing" placeholder="生猪批次" @keydown.enter.native="search()" clearable></el-input>
 					</div>
 					<el-button class="search" type="success" @click="search()">
 						<span class="icon iconfont icon-chakan14" :style='{"margin":"0 2px","fontSize":"inherit","color":"inherit","display":"none","height":"40px"}'></span>
@@ -41,7 +41,7 @@
 					<el-table-column :resizable='true' :sortable='true' label="序号" type="index" width="50" />
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guoshuleixing"
-						label="果蔬类型">
+						label="生猪批次">
 						<template slot-scope="scope">
 							{{scope.row.guoshuleixing}}
 						</template>

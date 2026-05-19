@@ -8,13 +8,13 @@
       :rules="rules"
       label-width="120px"
     >
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬名称" prop="guoshumingcheng">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪名称" prop="guoshumingcheng">
             <el-input v-model="ruleForm.guoshumingcheng" 
-                placeholder="果蔬名称" clearable :disabled=" false  ||ro.guoshumingcheng"></el-input>
+                placeholder="生猪名称" clearable :disabled=" false  ||ro.guoshumingcheng"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬图片" v-if="type!='cross' || (type=='cross' && !ro.guoshutupian)" prop="guoshutupian">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪图片" v-if="type!='cross' || (type=='cross' && !ro.guoshutupian)" prop="guoshutupian">
             <file-upload
-            tip="点击上传果蔬图片"
+            tip="点击上传生猪图片"
             action="file/upload"
             :limit="3"
             :multiple="true"
@@ -22,7 +22,7 @@
             @change="guoshutupianUploadChange"
             ></file-upload>
           </el-form-item>
-            <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' class="upload" v-else label="果蔬图片" prop="guoshutupian">
+            <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' class="upload" v-else label="生猪图片" prop="guoshutupian">
                 <img v-if="ruleForm.guoshutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.guoshutupian.split(',')[0]" width="100" height="100">
                 <img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.guoshutupian.split(',')" :src="baseUrl+item" width="100" height="100">
             </el-form-item>

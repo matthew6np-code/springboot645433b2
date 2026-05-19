@@ -5,8 +5,8 @@
 			<el-form class="center-form-pv" :style='{"padding":"0px 0px 0","margin":"0px","overflow":"hidden","flexWrap":"wrap","background":"none","display":"flex","fontSize":"inherit"}' :inline="true" :model="searchForm">
 				<el-row :style='{"width":"100%","fontSize":"inherit","color":"#999","textAlign":"left","display":"block","order":"2"}' >
 					<div :style='{"margin":"0 0px 0 0","fontSize":"inherit","display":"inline-block"}'>
-						<label :style='{"margin":"0 10px 0 0","color":"inherit","display":"inline-block","lineHeight":"40px","fontSize":"inherit","fontWeight":"500","height":"40px"}' class="item-label">果蔬名称</label>
-						<el-input v-model="searchForm.guoshumingcheng" placeholder="果蔬名称" @keydown.enter.native="search()" clearable></el-input>
+						<label :style='{"margin":"0 10px 0 0","color":"inherit","display":"inline-block","lineHeight":"40px","fontSize":"inherit","fontWeight":"500","height":"40px"}' class="item-label">生猪名称</label>
+						<el-input v-model="searchForm.guoshumingcheng" placeholder="生猪名称" @keydown.enter.native="search()" clearable></el-input>
 					</div>
 					<el-button class="search" type="success" @click="search()">
 						<span class="icon iconfont icon-chakan14" :style='{"margin":"0 2px","fontSize":"inherit","color":"inherit","display":"none","height":"40px"}'></span>
@@ -41,12 +41,12 @@
 					<el-table-column :resizable='true' :sortable='true' label="序号" type="index" width="50" />
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guoshumingcheng"
-						label="果蔬名称">
+						label="生猪名称">
 						<template slot-scope="scope">
 							{{scope.row.guoshumingcheng}}
 						</template>
 					</el-table-column>
-					<el-table-column :resizable='true' :sortable='true' prop="guoshutupian" width="200" label="果蔬图片">
+					<el-table-column :resizable='true' :sortable='true' prop="guoshutupian" width="200" label="生猪图片">
 						<template slot-scope="scope">
 							<div v-if="scope.row.guoshutupian">
 								<img v-if="scope.row.guoshutupian.substring(0,4)=='http'" :src="scope.row.guoshutupian.split(',')[0]" width="100" height="100" style="object-fit: cover" @click="imgPreView(scope.row.guoshutupian.split(',')[0])">

@@ -13,7 +13,7 @@ import com.entity.view.CaizhaiView;
 
 
 /**
- * 采摘
+ * 屠宰加工管理
  * 
  * @author 
  * @email 

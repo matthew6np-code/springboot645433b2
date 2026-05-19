@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 浇水
+ * 饲养环境
  * @author 
  * @email 
  * @date 2024-04-18 14:01:18
@@ -21,13 +21,13 @@ public class JiaoshuiVO  implements Serializable {
 
 	 			
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 	
 	private String guoshutupian;
 		
 	/**
-	 * 灌溉浇水
+	 * 养殖环境
 	 */
 	
 	private Integer guangaijiaoshui;
@@ -42,7 +42,7 @@ public class JiaoshuiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	 
 	public void setGuoshutupian(String guoshutupian) {
@@ -50,7 +50,7 @@ public class JiaoshuiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
@@ -58,7 +58,7 @@ public class JiaoshuiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：灌溉浇水
+	 * 设置：养殖环境
 	 */
 	 
 	public void setGuangaijiaoshui(Integer guangaijiaoshui) {
@@ -66,7 +66,7 @@ public class JiaoshuiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：灌溉浇水
+	 * 获取：养殖环境
 	 */
 	public Integer getGuangaijiaoshui() {
 		return guangaijiaoshui;

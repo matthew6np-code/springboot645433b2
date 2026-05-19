@@ -22,7 +22,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 
 
 /**
- * 果蔬信息
+ * 生猪信息
  * 数据库通用操作实体类（普通增删改查）
  * @author 
  * @email 
@@ -52,19 +52,19 @@ public class GuoshuxinxiEntity<T> implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long id;
 	/**
-	 * 果蔬名称
+	 * 生猪名称
 	 */
 					
 	private String guoshumingcheng;
 	
 	/**
-	 * 果蔬类型
+	 * 生猪批次
 	 */
 					
 	private String guoshuleixing;
 	
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 					
 	private String guoshutupian;
@@ -76,31 +76,31 @@ public class GuoshuxinxiEntity<T> implements Serializable {
 	private String shengzhangjieduan;
 	
 	/**
-	 * 种植数量
+	 * 养殖数量
 	 */
 					
 	private Integer zhongzhishuliang;
 	
 	/**
-	 * 病虫害防治
+	 * 病害防治
 	 */
 					
 	private String bingchonghaifangzhi;
 	
 	/**
-	 * 施肥
+	 * 饲料投喂记录
 	 */
 					
 	private Integer shifei;
 	
 	/**
-	 * 灌溉浇水
+	 * 养殖环境
 	 */
 					
 	private Integer guangaijiaoshui;
 	
 	/**
-	 * 播种时间
+	 * 入栏时间
 	 */
 				
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -108,7 +108,7 @@ public class GuoshuxinxiEntity<T> implements Serializable {
 	private Date bozhongshijian;
 	
 	/**
-	 * 果蔬场地
+	 * 生猪场地
 	 */
 					
 	private String guoshuchangdi;
@@ -159,37 +159,37 @@ public class GuoshuxinxiEntity<T> implements Serializable {
 		this.id = id;
 	}
 	/**
-	 * 设置：果蔬名称
+	 * 设置：生猪名称
 	 */
 	public void setGuoshumingcheng(String guoshumingcheng) {
 		this.guoshumingcheng = guoshumingcheng;
 	}
 	/**
-	 * 获取：果蔬名称
+	 * 获取：生猪名称
 	 */
 	public String getGuoshumingcheng() {
 		return guoshumingcheng;
 	}
 	/**
-	 * 设置：果蔬类型
+	 * 设置：生猪批次
 	 */
 	public void setGuoshuleixing(String guoshuleixing) {
 		this.guoshuleixing = guoshuleixing;
 	}
 	/**
-	 * 获取：果蔬类型
+	 * 获取：生猪批次
 	 */
 	public String getGuoshuleixing() {
 		return guoshuleixing;
 	}
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	public void setGuoshutupian(String guoshutupian) {
 		this.guoshutupian = guoshutupian;
 	}
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
@@ -207,73 +207,73 @@ public class GuoshuxinxiEntity<T> implements Serializable {
 		return shengzhangjieduan;
 	}
 	/**
-	 * 设置：种植数量
+	 * 设置：养殖数量
 	 */
 	public void setZhongzhishuliang(Integer zhongzhishuliang) {
 		this.zhongzhishuliang = zhongzhishuliang;
 	}
 	/**
-	 * 获取：种植数量
+	 * 获取：养殖数量
 	 */
 	public Integer getZhongzhishuliang() {
 		return zhongzhishuliang;
 	}
 	/**
-	 * 设置：病虫害防治
+	 * 设置：病害防治
 	 */
 	public void setBingchonghaifangzhi(String bingchonghaifangzhi) {
 		this.bingchonghaifangzhi = bingchonghaifangzhi;
 	}
 	/**
-	 * 获取：病虫害防治
+	 * 获取：病害防治
 	 */
 	public String getBingchonghaifangzhi() {
 		return bingchonghaifangzhi;
 	}
 	/**
-	 * 设置：施肥
+	 * 设置：饲料投喂记录
 	 */
 	public void setShifei(Integer shifei) {
 		this.shifei = shifei;
 	}
 	/**
-	 * 获取：施肥
+	 * 获取：饲料投喂记录
 	 */
 	public Integer getShifei() {
 		return shifei;
 	}
 	/**
-	 * 设置：灌溉浇水
+	 * 设置：养殖环境
 	 */
 	public void setGuangaijiaoshui(Integer guangaijiaoshui) {
 		this.guangaijiaoshui = guangaijiaoshui;
 	}
 	/**
-	 * 获取：灌溉浇水
+	 * 获取：养殖环境
 	 */
 	public Integer getGuangaijiaoshui() {
 		return guangaijiaoshui;
 	}
 	/**
-	 * 设置：播种时间
+	 * 设置：入栏时间
 	 */
 	public void setBozhongshijian(Date bozhongshijian) {
 		this.bozhongshijian = bozhongshijian;
 	}
 	/**
-	 * 获取：播种时间
+	 * 获取：入栏时间
 	 */
 	public Date getBozhongshijian() {
 		return bozhongshijian;
 	}
 	/**
-	 * 设置：果蔬场地
+	 * 设置：生猪场地
 	 */
 	public void setGuoshuchangdi(String guoshuchangdi) {
 		this.guoshuchangdi = guoshuchangdi;
 	}
 	/**
-	 * 获取：果蔬场地
+	 * 获取：生猪场地
 	 */
 	public String getGuoshuchangdi() {
 		return guoshuchangdi;

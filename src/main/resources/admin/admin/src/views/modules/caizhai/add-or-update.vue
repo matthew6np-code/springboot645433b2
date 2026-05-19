@@ -9,15 +9,15 @@
 			label-width="150px"
 		>
 			<template >
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="果蔬名称" prop="guoshumingcheng">
-					<el-input v-model="ruleForm.guoshumingcheng" placeholder="果蔬名称" clearable  :readonly="ro.guoshumingcheng"></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="生猪名称" prop="guoshumingcheng">
+					<el-input v-model="ruleForm.guoshumingcheng" placeholder="生猪名称" clearable  :readonly="ro.guoshumingcheng"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="果蔬名称" prop="guoshumingcheng">
-					<el-input v-model="ruleForm.guoshumingcheng" placeholder="果蔬名称" readonly></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="生猪名称" prop="guoshumingcheng">
+					<el-input v-model="ruleForm.guoshumingcheng" placeholder="生猪名称" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-if="type!='info' && !ro.guoshutupian" label="果蔬图片" prop="guoshutupian">
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-if="type!='info' && !ro.guoshutupian" label="生猪图片" prop="guoshutupian">
 					<file-upload
-						tip="点击上传果蔬图片"
+						tip="点击上传生猪图片"
 						action="file/upload"
 						:limit="3"
 						:multiple="true"
@@ -25,27 +25,27 @@
 						@change="guoshutupianUploadChange"
 					></file-upload>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-else-if="ruleForm.guoshutupian" label="果蔬图片" prop="guoshutupian">
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-else-if="ruleForm.guoshutupian" label="生猪图片" prop="guoshutupian">
 					<img v-if="ruleForm.guoshutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.guoshutupian.split(',')[0]" width="100" height="100">
 					<img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.guoshutupian.split(',')" :src="$base.url+item" width="100" height="100">
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="采摘数量" prop="zhongzhishuliang">
-					<el-input v-model.number="ruleForm.zhongzhishuliang" placeholder="采摘数量" clearable  :readonly="ro.zhongzhishuliang"></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="屠宰加工管理数量" prop="zhongzhishuliang">
+					<el-input v-model.number="ruleForm.zhongzhishuliang" placeholder="屠宰加工管理数量" clearable  :readonly="ro.zhongzhishuliang"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="采摘数量" prop="zhongzhishuliang">
-					<el-input v-model="ruleForm.zhongzhishuliang" placeholder="采摘数量" readonly></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="屠宰加工管理数量" prop="zhongzhishuliang">
+					<el-input v-model="ruleForm.zhongzhishuliang" placeholder="屠宰加工管理数量" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="date" v-if="type!='info'" label="采摘时间" prop="caizhaishijian">
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="date" v-if="type!='info'" label="屠宰加工管理时间" prop="caizhaishijian">
 					<el-date-picker
 						value-format="yyyy-MM-dd HH:mm:ss"
 						v-model="ruleForm.caizhaishijian" 
 						type="datetime"
 						:readonly="ro.caizhaishijian"
-						placeholder="采摘时间"
+						placeholder="屠宰加工管理时间"
 					></el-date-picker>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-else-if="ruleForm.caizhaishijian" label="采摘时间" prop="caizhaishijian">
-					<el-input v-model="ruleForm.caizhaishijian" placeholder="采摘时间" readonly></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-else-if="ruleForm.caizhaishijian" label="屠宰加工管理时间" prop="caizhaishijian">
+					<el-input v-model="ruleForm.caizhaishijian" placeholder="屠宰加工管理时间" readonly></el-input>
 				</el-form-item>
 			</template>
 			<el-form-item :style='{"padding":"0","margin":"30px 0","alignItems":"center","textAlign":"center","display":"flex","width":"100%","perspective":"320px","-webkitPerspective":"320px","fontSize":"48px","justifyContent":"flex-start"}' class="btn">
@@ -212,12 +212,12 @@ var objcross = this.$storage.getObj('crossObj');
       var table = this.$storage.getObj('crossTable');
       if(objcross!=null) {
 		  if(!this.ruleForm.zhongzhishuliang){
-			  this.$message.error("采摘数量不能为空");
+			  this.$message.error("屠宰加工管理数量不能为空");
 			  return
 		  }
 	      objcross.zhongzhishuliang = objcross.zhongzhishuliang - this.ruleForm.zhongzhishuliang
 	      if(objcross.zhongzhishuliang<0){
-				this.$message.error("采摘数量不足");
+				this.$message.error("屠宰加工管理数量不足");
 				return
 	      }
                 }

@@ -114,7 +114,7 @@
 				baseUrl: this.$config.baseUrl,
 				breadcrumbItem: [
 				  {
-					name: '果蔬生产资讯'
+					name: '生猪市场资讯'
 				  }
 				],
 				newsList: [],

@@ -8,9 +8,9 @@
       :rules="rules"
       label-width="120px"
     >
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="果蔬类型" prop="guoshuleixing">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="生猪批次" prop="guoshuleixing">
             <el-input v-model="ruleForm.guoshuleixing" 
-                placeholder="果蔬类型" clearable :disabled=" false  ||ro.guoshuleixing"></el-input>
+                placeholder="生猪批次" clearable :disabled=" false  ||ro.guoshuleixing"></el-input>
           </el-form-item>
 
       <el-form-item :style='{"padding":"0","margin":"0"}'>

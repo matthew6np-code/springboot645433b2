@@ -9,15 +9,15 @@
 			label-width="150px"
 		>
 			<template >
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="果蔬名称" prop="guoshumingcheng">
-					<el-input v-model="ruleForm.guoshumingcheng" placeholder="果蔬名称" clearable  :readonly="ro.guoshumingcheng"></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="生猪名称" prop="guoshumingcheng">
+					<el-input v-model="ruleForm.guoshumingcheng" placeholder="生猪名称" clearable  :readonly="ro.guoshumingcheng"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="果蔬名称" prop="guoshumingcheng">
-					<el-input v-model="ruleForm.guoshumingcheng" placeholder="果蔬名称" readonly></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="生猪名称" prop="guoshumingcheng">
+					<el-input v-model="ruleForm.guoshumingcheng" placeholder="生猪名称" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-if="type!='info' && !ro.guoshutupian" label="果蔬图片" prop="guoshutupian">
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-if="type!='info' && !ro.guoshutupian" label="生猪图片" prop="guoshutupian">
 					<file-upload
-						tip="点击上传果蔬图片"
+						tip="点击上传生猪图片"
 						action="file/upload"
 						:limit="3"
 						:multiple="true"
@@ -25,12 +25,12 @@
 						@change="guoshutupianUploadChange"
 					></file-upload>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-else-if="ruleForm.guoshutupian" label="果蔬图片" prop="guoshutupian">
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="upload" v-else-if="ruleForm.guoshutupian" label="生猪图片" prop="guoshutupian">
 					<img v-if="ruleForm.guoshutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.guoshutupian.split(',')[0]" width="100" height="100">
 					<img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.guoshutupian.split(',')" :src="$base.url+item" width="100" height="100">
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="select" v-if="type!='info'"  label="灌溉浇水" prop="guangaijiaoshui">
-					<el-select :disabled="ro.guangaijiaoshui" v-model="ruleForm.guangaijiaoshui" placeholder="请选择灌溉浇水" >
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="select" v-if="type!='info'"  label="养殖环境" prop="guangaijiaoshui">
+					<el-select :disabled="ro.guangaijiaoshui" v-model="ruleForm.guangaijiaoshui" placeholder="请选择养殖环境" >
 						<el-option
 							v-for="(item,index) in guangaijiaoshuiOptions"
 							v-bind:key="index"
@@ -39,9 +39,9 @@
 						</el-option>
 					</el-select>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="灌溉浇水" prop="guangaijiaoshui">
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="养殖环境" prop="guangaijiaoshui">
 					<el-input v-model="ruleForm.guangaijiaoshui"
-						placeholder="灌溉浇水" readonly></el-input>
+						placeholder="养殖环境" readonly></el-input>
 				</el-form-item>
 				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="date" v-if="type!='info'" label="灌溉时间" prop="guangaishijian">
 					<el-date-picker
@@ -222,7 +222,7 @@ var objcross = this.$storage.getObj('crossObj');
       var table = this.$storage.getObj('crossTable');
       if(objcross!=null) {
 		  if(!this.ruleForm.guangaijiaoshui){
-			  this.$message.error("灌溉浇水不能为空");
+			  this.$message.error("养殖环境不能为空");
 			  return
 		  }
 	      objcross.guangaijiaoshui = parseFloat(objcross.guangaijiaoshui) + parseFloat(this.ruleForm.guangaijiaoshui)

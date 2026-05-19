@@ -61,7 +61,7 @@
 		</div>
 		
 		<div class="title" :style='{"width":"100%","padding":"0","margin":"0 auto","background":"#b4ebcc","display":"block","height":"40px"}'>
-			<span :style='{"padding":"0 20px","color":"#fff","background":"url(http://codegen.caihongy.cn/20231012/60342d12bcdc4697b6c8dfdd2afa8617.jpg) no-repeat left center","display":"block","fontSize":"18px","lineHeight":"40px","fontWeight":"500"}'>果蔬生产资讯</span>
+			<span :style='{"padding":"0 20px","color":"#fff","background":"url(http://codegen.caihongy.cn/20231012/60342d12bcdc4697b6c8dfdd2afa8617.jpg) no-repeat left center","display":"block","fontSize":"18px","lineHeight":"40px","fontWeight":"500"}'>生猪市场资讯</span>
 		</div>
 		
 			
@@ -135,7 +135,7 @@
 	</div>
 	
 	<div class="title" :style='{"margin":"0 auto","borderColor":"#ddd","background":"none","borderWidth":"0 0 2px","width":"100%","borderStyle":"solid","height":"48px"}'>
-	  <span :style='{"padding":"0 24px","borderColor":"#fb3f52","color":"#fb3f52","background":"none","borderWidth":"0 0 4px","display":"inline-block","fontSize":"22px","lineHeight":"44px","borderStyle":"solid","fontWeight":"600","font":"\"宋体\""}'>果蔬信息展示</span>
+	  <span :style='{"padding":"0 24px","borderColor":"#fb3f52","color":"#fb3f52","background":"none","borderWidth":"0 0 4px","display":"inline-block","fontSize":"22px","lineHeight":"44px","borderStyle":"solid","fontWeight":"600","font":"\"宋体\""}'>生猪信息展示</span>
 	</div>
 	
 	

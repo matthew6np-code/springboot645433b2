@@ -13,7 +13,7 @@ import com.entity.view.NewstypeView;
 
 
 /**
- * 果蔬生产资讯分类
+ * 生猪市场资讯分类
  * 
  * @author 
  * @email 

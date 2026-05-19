@@ -11,7 +11,7 @@ import java.io.Serializable;
  
 
 /**
- * 施肥
+ * 饲料投喂记录
  * @author 
  * @email 
  * @date 2024-04-18 14:01:18
@@ -21,19 +21,19 @@ public class ShifeiVO  implements Serializable {
 
 	 			
 	/**
-	 * 果蔬图片
+	 * 生猪图片
 	 */
 	
 	private String guoshutupian;
 		
 	/**
-	 * 施肥
+	 * 饲料投喂记录
 	 */
 	
 	private Integer shifei;
 		
 	/**
-	 * 施肥时间
+	 * 饲料投喂记录时间
 	 */
 		
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -42,7 +42,7 @@ public class ShifeiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：果蔬图片
+	 * 设置：生猪图片
 	 */
 	 
 	public void setGuoshutupian(String guoshutupian) {
@@ -50,7 +50,7 @@ public class ShifeiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：果蔬图片
+	 * 获取：生猪图片
 	 */
 	public String getGuoshutupian() {
 		return guoshutupian;
@@ -58,7 +58,7 @@ public class ShifeiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：施肥
+	 * 设置：饲料投喂记录
 	 */
 	 
 	public void setShifei(Integer shifei) {
@@ -66,7 +66,7 @@ public class ShifeiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：施肥
+	 * 获取：饲料投喂记录
 	 */
 	public Integer getShifei() {
 		return shifei;
@@ -74,7 +74,7 @@ public class ShifeiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：施肥时间
+	 * 设置：饲料投喂记录时间
 	 */
 	 
 	public void setShifeishijian(Date shifeishijian) {
@@ -82,7 +82,7 @@ public class ShifeiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：施肥时间
+	 * 获取：饲料投喂记录时间
 	 */
 	public Date getShifeishijian() {
 		return shifeishijian;
