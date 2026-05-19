@@ -128,7 +128,7 @@
 			this.centerType = true
 		}
 		this.baseUrl = this.$config.baseUrl;
-	    this.shengzhangjieduanOptions = '苗期,生长期,开花期,结果期'.split(',');
+	    this.shengzhangjieduanOptions = '哺乳期,保育期,育肥前期,育肥后期'.split(',');
 		this.selectOptionsList.push({name:'生长阶段',list:this.shengzhangjieduanOptions,tableName: 'shengzhangjieduan',check: -1})
       this.getFenlei();
       this.getList(1, '全部');

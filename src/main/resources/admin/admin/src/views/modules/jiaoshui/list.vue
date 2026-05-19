@@ -64,7 +64,7 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="guangaishijian"
-						label="灌溉时间">
+						label="喂食时间">
 						<template slot-scope="scope">
 							{{scope.row.guangaishijian}}
 						</template>

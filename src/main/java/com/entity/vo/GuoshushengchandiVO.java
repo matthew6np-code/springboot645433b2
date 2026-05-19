@@ -33,7 +33,7 @@ public class GuoshushengchandiVO  implements Serializable {
 	private String shengchandidian;
 		
 	/**
-	 * 土壤情况
+	 * 养殖环境
 	 */
 	
 	private String turangqingkuang;
@@ -90,7 +90,7 @@ public class GuoshushengchandiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：土壤情况
+	 * 设置：养殖环境
 	 */
 	 
 	public void setTurangqingkuang(String turangqingkuang) {
@@ -98,7 +98,7 @@ public class GuoshushengchandiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：土壤情况
+	 * 获取：养殖环境
 	 */
 	public String getTurangqingkuang() {
 		return turangqingkuang;

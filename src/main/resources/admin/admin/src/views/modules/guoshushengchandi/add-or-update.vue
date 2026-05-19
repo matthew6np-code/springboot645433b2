@@ -35,11 +35,11 @@
 				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="生产地点" prop="shengchandidian">
 					<el-input v-model="ruleForm.shengchandidian" placeholder="生产地点" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="土壤情况" prop="turangqingkuang">
-					<el-input v-model="ruleForm.turangqingkuang" placeholder="土壤情况" clearable  :readonly="ro.turangqingkuang"></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="养殖环境" prop="turangqingkuang">
+					<el-input v-model="ruleForm.turangqingkuang" placeholder="养殖环境" clearable  :readonly="ro.turangqingkuang"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="土壤情况" prop="turangqingkuang">
-					<el-input v-model="ruleForm.turangqingkuang" placeholder="土壤情况" readonly></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' v-else class="input" label="养殖环境" prop="turangqingkuang">
+					<el-input v-model="ruleForm.turangqingkuang" placeholder="养殖环境" readonly></el-input>
 				</el-form-item>
 				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-if="type!='info'"  label="地理位置" prop="diliweizhi">
 					<el-input v-model="ruleForm.diliweizhi" placeholder="地理位置" clearable  :readonly="ro.diliweizhi"></el-input>

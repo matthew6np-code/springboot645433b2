@@ -64,7 +64,7 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='true'  
 						prop="turangqingkuang"
-						label="土壤情况">
+						label="养殖环境">
 						<template slot-scope="scope">
 							{{scope.row.turangqingkuang}}
 						</template>

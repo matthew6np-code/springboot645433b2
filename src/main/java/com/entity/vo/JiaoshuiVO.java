@@ -33,7 +33,7 @@ public class JiaoshuiVO  implements Serializable {
 	private Integer guangaijiaoshui;
 		
 	/**
-	 * 灌溉时间
+	 * 喂食时间
 	 */
 		
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -74,7 +74,7 @@ public class JiaoshuiVO  implements Serializable {
 				
 	
 	/**
-	 * 设置：灌溉时间
+	 * 设置：喂食时间
 	 */
 	 
 	public void setGuangaishijian(Date guangaishijian) {
@@ -82,7 +82,7 @@ public class JiaoshuiVO  implements Serializable {
 	}
 	
 	/**
-	 * 获取：灌溉时间
+	 * 获取：喂食时间
 	 */
 	public Date getGuangaishijian() {
 		return guangaishijian;

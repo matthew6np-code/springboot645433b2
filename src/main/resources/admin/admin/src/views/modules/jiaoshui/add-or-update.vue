@@ -43,17 +43,17 @@
 					<el-input v-model="ruleForm.guangaijiaoshui"
 						placeholder="养殖环境" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="date" v-if="type!='info'" label="灌溉时间" prop="guangaishijian">
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="date" v-if="type!='info'" label="喂食时间" prop="guangaishijian">
 					<el-date-picker
 						value-format="yyyy-MM-dd HH:mm:ss"
 						v-model="ruleForm.guangaishijian" 
 						type="datetime"
 						:readonly="ro.guangaishijian"
-						placeholder="灌溉时间"
+						placeholder="喂食时间"
 					></el-date-picker>
 				</el-form-item>
-				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-else-if="ruleForm.guangaishijian" label="灌溉时间" prop="guangaishijian">
-					<el-input v-model="ruleForm.guangaishijian" placeholder="灌溉时间" readonly></el-input>
+				<el-form-item :style='{"width":"100%","margin":"0 0 30px 0","fontSize":"inherit","color":"inherit"}' class="input" v-else-if="ruleForm.guangaishijian" label="喂食时间" prop="guangaishijian">
+					<el-input v-model="ruleForm.guangaishijian" placeholder="喂食时间" readonly></el-input>
 				</el-form-item>
 			</template>
 			<el-form-item :style='{"padding":"0","margin":"30px 0","alignItems":"center","textAlign":"center","display":"flex","width":"100%","perspective":"320px","-webkitPerspective":"320px","fontSize":"48px","justifyContent":"flex-start"}' class="btn">

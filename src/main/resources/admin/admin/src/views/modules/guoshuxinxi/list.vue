@@ -391,7 +391,7 @@ import caizhaiCrossAddOrUpdate from "../caizhai/add-or-update";
 
 
     init () {
-          this.shengzhangjieduanOptions = "苗期,生长期,开花期,结果期".split(',')
+          this.shengzhangjieduanOptions = "哺乳期,保育期,育肥前期,育肥后期".split(',')
     },
     search() {
       this.pageIndex = 1;

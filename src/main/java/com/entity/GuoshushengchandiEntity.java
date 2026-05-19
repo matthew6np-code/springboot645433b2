@@ -70,7 +70,7 @@ public class GuoshushengchandiEntity<T> implements Serializable {
 	private String shengchandidian;
 	
 	/**
-	 * 土壤情况
+	 * 养殖环境
 	 */
 					
 	private String turangqingkuang;
@@ -149,13 +149,13 @@ public class GuoshushengchandiEntity<T> implements Serializable {
 		return shengchandidian;
 	}
 	/**
-	 * 设置：土壤情况
+	 * 设置：养殖环境
 	 */
 	public void setTurangqingkuang(String turangqingkuang) {
 		this.turangqingkuang = turangqingkuang;
 	}
 	/**
-	 * 获取：土壤情况
+	 * 获取：养殖环境
 	 */
 	public String getTurangqingkuang() {
 		return turangqingkuang;

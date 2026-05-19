@@ -30,9 +30,9 @@
             <el-input v-model="ruleForm.shengchandidian" 
                 placeholder="生产地点" clearable :disabled=" false  ||ro.shengchandidian"></el-input>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="土壤情况" prop="turangqingkuang">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="养殖环境" prop="turangqingkuang">
             <el-input v-model="ruleForm.turangqingkuang" 
-                placeholder="土壤情况" clearable :disabled=" false  ||ro.turangqingkuang"></el-input>
+                placeholder="养殖环境" clearable :disabled=" false  ||ro.turangqingkuang"></el-input>
           </el-form-item>
           <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="地理位置" prop="diliweizhi">
             <el-input v-model="ruleForm.diliweizhi" 

@@ -36,13 +36,13 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="灌溉时间" prop="guangaishijian">
+          <el-form-item :style='{"width":"100%","padding":"10px","margin":"0 0 10px","background":"none","display":"inline-block"}' label="喂食时间" prop="guangaishijian">
               <el-date-picker
 				  :disabled=" false  ||ro.guangaishijian"
                   value-format="yyyy-MM-dd HH:mm:ss"
                   v-model="ruleForm.guangaishijian" 
                   type="datetime"
-                  placeholder="灌溉时间">
+                  placeholder="喂食时间">
               </el-date-picker>
           </el-form-item>
 

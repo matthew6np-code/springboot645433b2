@@ -362,7 +362,7 @@ export default {
 					this.$message.error(data.msg);
 				}
             });
-            this.shengzhangjieduanOptions = "苗期,生长期,开花期,结果期".split(',')
+            this.shengzhangjieduanOptions = "哺乳期,保育期,育肥前期,育肥后期".split(',')
 			
 		},
     // 多级联动参数

@@ -8,7 +8,10 @@
       "Bash(scoop install *)",
       "Bash(curl -sL \"https://github.com/cli/cli/releases/latest/download/gh_*_windows_amd64.zip\" -o /tmp/gh-cli.zip)",
       "Bash(unzip -o /tmp/gh-cli.zip -d /tmp/gh-cli)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(ping)",
+      "Bash(git config *)",
+      "Bash(git remote *)"
     ]
   }
 }
