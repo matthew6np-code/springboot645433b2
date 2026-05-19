@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "Read(//c/Users/Matthew/**)",
+      "Bash(winget install *)",
+      "Bash(choco install *)",
+      "Bash(scoop install *)",
+      "Bash(curl -sL \"https://github.com/cli/cli/releases/latest/download/gh_*_windows_amd64.zip\" -o /tmp/gh-cli.zip)",
+      "Bash(unzip -o /tmp/gh-cli.zip -d /tmp/gh-cli)",
+      "Read(//tmp/**)"
+    ]
+  }
+}
